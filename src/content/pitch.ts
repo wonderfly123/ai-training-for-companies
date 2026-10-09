@@ -37,7 +37,7 @@ export const pitch = {
   cases: [
     {
       company: "SnapLogic",
-      title: "The company's first GTM sales agent",
+      title: "GTM sales assistant, an internal build",
       problem: "Reps prepped for calls by pulling account history from separate systems. Prep took longer than the call.",
       built: "An agent on SnapLogic AgentCreator that pulls account context and answers reps' questions on demand.",
       result: "Account briefs in seconds. The build became the teaching example for customer bootcamps.",

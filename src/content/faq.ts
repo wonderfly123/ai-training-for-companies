@@ -46,6 +46,6 @@ export const faq: FaqItem[] = [
   {
     question: "Who teaches the program?",
     answer:
-      "Consultants who have built and deployed AI systems for clients. The program is led by founder Jordan Millhausen, who has shipped a GTM sales agent for SnapLogic, a customer success platform that surfaces churn risk, a customer service text agent, a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, and a hologram control application for clients in events, experiential marketing, real estate, fitness, and digital native companies. He is a Solutions Engineer at Snowflake, where he leads hands-on labs, and previously led the AgentCreator bootcamps at SnapLogic.",
+      "Consultants who have built and deployed AI systems for clients. The program is led by founder Jordan Millhausen, who has shipped a GTM sales agent for SnapLogic, a customer success platform that surfaces churn risk, a customer service text agent, a daily document-writing pipeline, and a CRM lead pipeline that replaced Zapier for clients in events, experiential marketing, real estate, and digital native companies. He is a Solutions Engineer at Snowflake, where he leads hands-on labs, and previously led the AgentCreator bootcamps at SnapLogic.",
   },
 ];

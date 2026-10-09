@@ -80,14 +80,14 @@ export const deck: Slide[] = [
       {
         org: "Client work",
         role: "Ten systems in production",
-        note: "SnapLogic, Nekter, Wonderfly, Windansea Coconuts, Applegate Ventures, Hologram Pilates",
+        note: "SnapLogic, Nekter, Wonderfly, Windansea Coconuts, Applegate Ventures",
       },
     ],
   },
   { kind: "case-study", slug: "wonderfly" },
   { kind: "case-study", slug: "windansea-coconuts" },
   { kind: "case-study", slug: "applegate-ventures" },
-  { kind: "case-study", slug: "hologram-pilates" },
+  { kind: "case-study", slug: "nekter" },
   {
     kind: "enterprise",
     heading: "Enterprise training experience",

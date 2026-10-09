@@ -49,14 +49,14 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "snaplogic",
     company: "SnapLogic",
-    role: "Client project",
-    title: "The company's first GTM sales agent",
+    role: "Internal build",
+    title: "GTM sales assistant",
     summary:
       "SnapLogic sells an integration and agent platform to enterprises. Its own go-to-market team was preparing for calls by hand while selling customers on automation.",
     problem:
       "Before every call, reps and sales engineers pulled account history, open tickets, and product context from separate systems. Prep took longer than the call. The platform could do this work, but nobody had built it for the sales team.",
     built: [
-      "The company's first GTM sales agent, built on SnapLogic AgentCreator against the systems the sales team already used.",
+      "The company's first GTM sales assistant, built on SnapLogic AgentCreator against the systems the sales team already used.",
       "Account briefs on demand: the agent pulls context from connected systems and answers a rep's questions before and during a call.",
       "The build became the reference example for the AgentCreator bootcamps, where customer teams learned to build their own agents the same way.",
     ],
@@ -156,32 +156,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     screenshot: {
       label: "Applegate Ventures admin webhook dashboard with replay",
-    },
-  },
-  {
-    slug: "hologram-pilates",
-    company: "Hologram Pilates (Proto)",
-    role: "Client project",
-    title: "Controlling a hologram, the lights, and the sound from one app",
-    summary:
-      "A Pilates studio pilot where a Proto hologram unit plays a recorded instructor while a certified instructor in the room corrects form. Tested inside a franchise gym before committing to a standalone studio.",
-    problem:
-      "A class needs the hologram video, the room lights, and the sound to move together on the instructor's cue. The vendor's web console was a browser round trip to the cloud with no control over lights or room audio, and a frozen hologram reads as broken to a room full of people.",
-    built: [
-      "A custom control app that drives video playback on the Proto unit, the room lighting, and the sound from one surface the live instructor operates mid-class.",
-      "Block-based class structure with hold loops that repeat without a visible cut, so the instructor can pause on a cue without the figure freezing.",
-      "An operating plan for the pilot: three test rounds, KPIs that decide the business (rebooking within 14 days above 40 percent, zero-glitch class rate above 95 percent), and a list of every unconfirmed assumption marked as unconfirmed.",
-    ],
-    result:
-      "The instructor runs the room from one app instead of juggling a vendor console, a music app, and the light switches. The pilot has a measurement plan, so the decision to open a studio is made on data, not on how cool the hologram looks.",
-    lessons: [
-      "Reading vendor docs and APIs to find what the product can actually do",
-      "Designing for failure in front of a live audience",
-      "Picking the one number that decides whether the thing works",
-      "Writing down what is unconfirmed so nobody mistakes a guess for a decision",
-    ],
-    screenshot: {
-      label: "Hologram Pilates control app, class playback screen",
     },
   },
 ];
