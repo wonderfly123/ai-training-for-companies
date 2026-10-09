@@ -1,0 +1,51 @@
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+/**
+ * Written as direct answers to the literal questions people type into
+ * search engines and ask answer engines. Keep each answer self-contained.
+ */
+export const faq: FaqItem[] = [
+  {
+    question: "What is AI training for companies?",
+    answer:
+      "AI training for companies is a program that teaches a company's own employees to build and run AI systems instead of buying them from a vendor. In this program, a cohort of four to eight people picks one real workflow from their operations and ships a working AI system to production in eight weeks, with an instructor who has built the same kind of systems for his own businesses.",
+  },
+  {
+    question: "What is a forward deployed engineer?",
+    answer:
+      "A forward deployed engineer, or FDE, is an engineer who works inside the business rather than in a separate technology department. They sit with operations, understand the actual workflow, and build software that fixes it. The term comes from enterprise software companies that place engineers at customer sites. An internal FDE does the same thing for their own company, and is the role this program trains people for.",
+  },
+  {
+    question: "How much does AI training for a company cost?",
+    answer:
+      "The eight-week cohort for four to eight people is priced as a single fixed fee, listed on the program page. That fee covers the full program, the shipped system, and the runbook. There are no per-seat charges and no software to license. Follow-on advisory after the cohort is quoted per engagement.",
+  },
+  {
+    question: "How long does it take to train an AI engineer?",
+    answer:
+      "Eight weeks is enough for a motivated operations or engineering person to ship a production AI system with guidance, which is what this program does. Becoming fully independent takes a second and third project, which is why the program ends with a ranked list of what to build next and the team has the skills to build it.",
+  },
+  {
+    question: "Do my employees need to be programmers?",
+    answer:
+      "No. The best cohorts mix operations people who know where the problems are with one or two people who are comfortable with code or data. Modern AI tooling lets non-programmers go further than they expect, and the program is structured so each person contributes where they are strongest.",
+  },
+  {
+    question: "What does the company have at the end of the program?",
+    answer:
+      "One AI system running in production inside your company, built by your team, with monitoring, human handoff, and a runbook. You also have a team that understands how it works and a prioritized list of the next systems to build.",
+  },
+  {
+    question: "Why train an internal team instead of hiring an AI consultant?",
+    answer:
+      "A consultant builds something and leaves, and the knowledge leaves with them. Every change afterward is another invoice. An internal team keeps building after the engagement ends, understands the business context a consultant never will, and costs nothing extra to maintain what they built.",
+  },
+  {
+    question: "Who teaches the program?",
+    answer:
+      "Jordan Millhausen. He co-owns three operating businesses and built the AI and automation systems that run them, including a customer service text agent, a daily document-writing pipeline, and a CRM lead pipeline that replaced Zapier. He is a Solutions Engineer at Snowflake, previously led AI agent bootcamps at SnapLogic, and spent six years as a systems engineer at Northrop Grumman.",
+  },
+];
