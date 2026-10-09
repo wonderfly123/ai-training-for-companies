@@ -37,7 +37,7 @@ export const about: About = {
   careerShort: [
     { label: "Founder", value: "Jordan Millhausen" },
     { label: "Team", value: "Jordan Millhausen (instruction), Anthony Huni (enterprise sales)" },
-    { label: "Client systems", value: "5 in production across 4 industries" },
+    { label: "Client systems", value: "10 in production across 4 industries" },
     { label: "Enterprise training", value: "SnapLogic AgentCreator bootcamps" },
   ],
 };

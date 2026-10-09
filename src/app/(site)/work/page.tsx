@@ -14,7 +14,7 @@ export default function WorkPage() {
     <>
       <CaseStudyGrid
         eyebrow="Client work"
-        title="Five client systems in production"
+        title="Selected client systems"
         lede="Each one was built for a client and is still running. Click through for the problem, what was built, the result, and what a cohort learns from it."
       />
       <ContactCta />
