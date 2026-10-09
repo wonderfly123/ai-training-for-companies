@@ -7,9 +7,9 @@ export function ContactCta() {
   return (
     <section className="ruled">
       <Container className="py-20">
-        <MonoLabel>Fig. 8 &nbsp; Next step</MonoLabel>
+        <MonoLabel>Next step</MonoLabel>
         <h2 className="mt-4 max-w-2xl font-sans text-3xl font-medium leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
-          Tell me the one workflow in your company that wastes the most human time.
+          Tell us the one workflow in your company that wastes the most human time.
         </h2>
         <p className="mt-4 max-w-xl text-lg text-ink-muted">That is the first conversation.</p>
         <div className="mt-8 flex flex-wrap items-center gap-4">

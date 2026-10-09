@@ -1,5 +1,4 @@
 import { site } from "@/content/site";
-import { about } from "@/content/about";
 import type { Slide as SlideData } from "@/content/deck";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { Figure } from "@/components/ui/figure";
@@ -11,7 +10,6 @@ export function TitleBody() {
   return (
     <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end">
       <div>
-        <MonoLabel accent>A cold pitch, written to be read</MonoLabel>
         <h1 className="mt-5 font-sans text-5xl font-medium leading-[0.98] tracking-[-0.03em] text-ink sm:text-6xl lg:text-7xl">
           {site.tagline}
         </h1>
@@ -22,7 +20,6 @@ export function TitleBody() {
       <div className="border-t border-ink pt-4 font-mono text-xs leading-relaxed text-ink-muted">
         <p>{site.name}</p>
         <p>{site.founder.name}, {site.founder.title}</p>
-        <p>{site.founder.city}</p>
         <p className="mt-4">14 slides. About six minutes.</p>
       </div>
     </div>
@@ -71,22 +68,14 @@ export function TeacherBody({ slide }: { slide: Extract<"teacher"> }) {
       <div className="flex flex-col gap-6">
         <Figure
           label={`${site.founder.name}, headshot`}
-          caption={`${site.founder.name}, ${site.founder.city}`}
+          caption={site.founder.name}
           aspect="aspect-[4/5] max-h-[46vh]"
         />
       </div>
       <div>
         <SlideTitle>{slide.heading}</SlideTitle>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-muted">{slide.body}</p>
-        <div className="mt-8 grid grid-cols-2 gap-px border border-rule bg-rule sm:grid-cols-4">
-          {slide.stats.map((s) => (
-            <div key={s.label} className="bg-paper p-4">
-              <p className="tabular font-mono text-2xl text-ink">{s.value}</p>
-              <p className="mt-1 font-mono text-[10px] leading-snug text-ink-muted">{s.label}</p>
-            </div>
-          ))}
-        </div>
-        <dl className="mt-6 border-t border-ink">
+        <dl className="mt-8 border-t border-ink">
           {slide.roles.map((r) => (
             <div key={r.org} className="grid gap-1 border-b border-rule py-2.5 sm:grid-cols-[14rem_1fr] sm:gap-4">
               <dt className="font-sans text-sm font-medium text-ink">{r.org}</dt>
@@ -96,7 +85,6 @@ export function TeacherBody({ slide }: { slide: Extract<"teacher"> }) {
             </div>
           ))}
         </dl>
-        <p className="mt-4 font-mono text-[11px] text-ink-muted">{about.lede}</p>
       </div>
     </div>
   );

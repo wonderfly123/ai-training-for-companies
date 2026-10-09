@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-paper: #f4f1ea;
-  --color-paper-deep: #ebe7dd;
+  --color-paper: #ffffff;
+  --color-paper-deep: #f4f4f4;
   --color-ink: #161616;
-  --color-ink-muted: #5c5a54;
-  --color-rule: #d9d4c7;
-  --color-accent: #d5451b;
+  --color-ink-muted: #595959;
+  --color-rule: #e2e2e2;
+  --color-accent: #161616;
   --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
@@ -29,13 +29,8 @@ body {
   color: var(--color-paper);
 }
 
-/* Faint notebook rule lines. 32px pitch matches the 2rem vertical rhythm. */
 .ruled {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 31px,
-    var(--color-rule) 31px 32px
-  );
+  background-image: none;
 }
 
 /* A thin vertical margin line, like the red margin on ruled paper, in ink. */

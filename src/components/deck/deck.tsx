@@ -42,7 +42,7 @@ export function Deck() {
     const apply = () => {
       const n = readHash();
       setCurrent(n);
-      document.getElementById(String(n))?.scrollIntoView({ block: "start" });
+      document.getElementById(String(n))?.scrollIntoView({ block: "start", behavior: "instant" });
     };
     apply();
     window.addEventListener("hashchange", apply);

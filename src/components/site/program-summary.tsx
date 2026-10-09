@@ -10,7 +10,7 @@ export function ProgramSummary() {
       <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <div>
           <SectionHeading
-            eyebrow="Fig. 5 &nbsp; The program"
+            eyebrow="The program"
             title={`${site.pricing.weeks} weeks. One shipped system.`}
             lede={program.summary}
           />

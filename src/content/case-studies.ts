@@ -11,7 +11,6 @@ export interface CaseStudy {
   summary: string;
   problem: string;
   built: string[];
-  stack: string[];
   result: string;
   numbers: Stat[];
   lessons: string[];
@@ -22,10 +21,10 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "wonderfly",
     company: "Wonderfly",
-    role: "Co-owner",
+    role: "Client project",
     title: "A customer service agent that answers texts on weekends",
     summary:
-      "Wonderfly runs event venues in Baltimore. Customers text questions at all hours and most of the bookings come in on weekends when nobody is at a desk.",
+      "Wonderfly runs event venues. Customers text questions at all hours and most of the bookings come in on weekends when nobody is at a desk.",
     problem:
       "Customers text the venue about availability, pricing, and party packages. Most of those messages arrive evenings and weekends. Staff answered them Monday, by which point the customer had booked somewhere else.",
     built: [
@@ -35,20 +34,10 @@ export const caseStudies: CaseStudy[] = [
       "Business-hours gating, test mode, and a model switcher so the team can try a new model without a deploy.",
       "A separate content engine that researches competitors, writes briefs and drafts for three brands, schedules posts, pulls analytics, and feeds top performers and rejections back into next week's briefs.",
     ],
-    stack: [
-      "Next.js",
-      "Supabase",
-      "Claude via the Anthropic SDK",
-      "OpenPhone webhooks",
-      "Discord webhooks",
-      "Vercel cron",
-      "Neon Postgres and Drizzle (content engine)",
-      "Meta Graph API, Firecrawl, Apify (content engine)",
-    ],
     result:
-      "Weekend texts get an answer in seconds instead of on Monday. Staff only touch the conversations the agent flags. The whole thing was built in evenings and weekends by a co-owner, not a vendor.",
+      "Weekend texts get an answer in seconds instead of on Monday. Staff only touch the conversations the agent flags.",
     numbers: [
-      { label: "Built", value: "Nights and weekends" },
+      { label: "Response time", value: "Seconds, around the clock" },
       { label: "Brands on the content engine", value: "3" },
       { label: "Human handoff", value: "Confidence threshold to Discord" },
     ],
@@ -65,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "windansea-coconuts",
     company: "Windansea Coconuts",
-    role: "Co-owner",
+    role: "Client project",
     title: "Operations that run without anyone retyping anything",
     summary:
       "Windansea Coconuts sells branded coconuts to resorts, weddings, and corporate events. Two owners, no full-time staff, and roughly $400K of revenue each of the last two summers.",
@@ -78,15 +67,6 @@ export const caseStudies: CaseStudy[] = [
       "Square invoice webhooks that detect wholesale orders, including misspellings, and open tracking tasks with every line item.",
       "A decal order form that produces a one-page PDF and emails the vendor.",
       "A daily 7 AM job where Claude reads each upcoming event's fields, attachments, comments, and matching email threads, then writes or updates a versioned Run of Show as a Word document, keeping any edits people made by hand and listing what it could not confirm.",
-    ],
-    stack: [
-      "Next.js on Vercel",
-      "Pipedrive and Square webhooks",
-      "ClickUp API",
-      "Gmail SMTP and IMAP",
-      "Claude structured outputs",
-      "pdf-lib and docx generation",
-      "Vitest",
     ],
     result:
       "A closed deal becomes a tracked event with a completed intake form and a current run sheet without anyone retyping it. Failures email the owner with the payload, so nothing fails silently.",
@@ -108,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "wd-capital",
     company: "WD Capital",
-    role: "Co-founder",
+    role: "Client project",
     title: "A lead pipeline that replaced Zapier and showed its work",
     summary:
       "WD Capital is a real estate brokerage and syndication company. Deal flow depends on finding distressed and off-market properties before anyone else and getting them into the CRM clean.",
@@ -121,14 +101,6 @@ export const caseStudies: CaseStudy[] = [
       "Mapping of foreclosure stage, sale date, and property type to HubSpot's allowed values, with an email alert when an invariant breaks.",
       "Investor onboarding forms that write to HubSpot, plus a skip-trace import across six states.",
       "A separate deal-finding engine that mines county parcel data near substations and highway interchanges to surface cheap industrial land worth a letter.",
-    ],
-    stack: [
-      "Next.js 16 on Vercel",
-      "Neon Postgres",
-      "HubSpot CRM API with a custom Leads object",
-      "PropertyRadar webhooks",
-      "Vercel cron",
-      "Python and ArcGIS REST (parcel engine)",
     ],
     result:
       "Zapier is gone. Leads land in HubSpot in seconds with a full audit trail, and any failure can be replayed from the dashboard. The company has serviced million-dollar transactions on top of this pipeline.",
@@ -150,7 +122,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "hologram-pilates",
     company: "Hologram Pilates (Proto)",
-    role: "Builder and partner",
+    role: "Client project",
     title: "Controlling a hologram, the lights, and the sound from one app",
     summary:
       "A Pilates studio pilot where a Proto hologram unit plays a recorded instructor while a certified instructor in the room corrects form. Tested inside a franchise gym before committing to a standalone studio.",
@@ -160,12 +132,6 @@ export const caseStudies: CaseStudy[] = [
       "A custom control app that drives video playback on the Proto unit, the room lighting, and the sound from one surface the live instructor operates mid-class.",
       "Block-based class structure with hold loops that repeat without a visible cut, so the instructor can pause on a cue without the figure freezing.",
       "An operating plan for the pilot: three test rounds, KPIs that decide the business (rebooking within 14 days above 40 percent, zero-glitch class rate above 95 percent), and a list of every unconfirmed assumption marked as unconfirmed.",
-    ],
-    stack: [
-      "Proto hologram unit and Proto Cloud",
-      "Custom control application",
-      "Lighting and audio control",
-      "Pre-recorded instructor video in stacked blocks",
     ],
     result:
       "The instructor runs the room from one app instead of juggling a vendor console, a music app, and the light switches. The pilot has a measurement plan, so the decision to open a studio is made on data, not on how cool the hologram looks.",
@@ -187,8 +153,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "applegate-ventures",
     company: "Applegate Ventures",
-    role: "Client build",
-    title: "A home-buying and investor site with lead routing, built for a client",
+    role: "Client project",
+    title: "A home-buying and investor site with lead routing",
     summary:
       "Applegate Ventures buys homes as-is for cash in four states and partners with investors on deals. They needed a site that turns visitors into offer requests and investor conversations.",
     problem:
@@ -198,9 +164,8 @@ export const caseStudies: CaseStudy[] = [
       "Offer and investor forms with validation on the server, field limits, and email delivery that labels which form the lead came from.",
       "Proof sections built from the client's real track record: $12M+ acquired and a 59 percent average IRR on completed deals.",
     ],
-    stack: ["Next.js 16", "Tailwind CSS 4", "Nodemailer SMTP", "Vercel"],
     result:
-      "Leads arrive with the property details or investment range already filled in. The site shipped in days, not months, because it was built on the same patterns used across the other businesses.",
+      "Leads arrive with the property details or investment range already filled in. The site shipped in days, not months, because it was built on the same patterns used across our other client systems.",
     numbers: [
       { label: "Client track record", value: "$12M+ acquired" },
       { label: "Average IRR cited", value: "59%" },

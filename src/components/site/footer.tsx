@@ -30,7 +30,6 @@ export function Footer() {
                 LinkedIn
               </a>
             </li>
-            <li className="text-ink-muted">{site.founder.city}</li>
           </ul>
         </div>
         <div>
@@ -39,7 +38,7 @@ export function Footer() {
             {[
               ["/program", "Program"],
               ["/work", "Work"],
-              ["/about", "About"],
+              ["/people", "People"],
               ["/deck", "Deck"],
               ["/contact", "Contact"],
             ].map(([href, label]) => (
@@ -54,9 +53,8 @@ export function Footer() {
       </Container>
       <Container className="flex flex-wrap items-center justify-between gap-3 border-t border-rule py-5">
         <MonoLabel>
-          &copy; {year} {site.founder.name}
+          &copy; {year} {site.name}
         </MonoLabel>
-        <MonoLabel>Built by hand. No templates.</MonoLabel>
       </Container>
     </footer>
   );

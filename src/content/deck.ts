@@ -1,5 +1,3 @@
-import type { Stat } from "./case-studies";
-
 interface Point {
   n: string;
   title: string;
@@ -14,7 +12,6 @@ export type Slide =
       kind: "teacher";
       heading: string;
       body: string;
-      stats: Stat[];
       roles: { org: string; role: string; note: string }[];
     }
   | { kind: "case-study"; slug: string }
@@ -29,27 +26,27 @@ export type Slide =
   | { kind: "fit"; heading: string }
   | { kind: "next"; heading: string; body: string; steps: string[] };
 
-/** Fourteen slides. Written to be read cold, without a presenter. */
+/** Fourteen slides. Written to be read without a presenter. */
 export const deck: Slide[] = [
   { kind: "title" },
   {
     kind: "problem",
-    heading: "Most companies have bought AI three times and own none of it",
+    heading: "Why AI projects stall inside companies",
     points: [
       {
         n: "01",
-        title: "The tools",
-        body: "Seats were purchased. A few people use them for email. Nothing in the operation changed.",
+        title: "Tools without builders",
+        body: "Licenses get bought. A few people use them for email. Operations do not change.",
       },
       {
         n: "02",
-        title: "The consultant",
-        body: "Something got built. Then they left, and every change since is a new invoice from someone who no longer remembers how it works.",
+        title: "Consultants who leave",
+        body: "A vendor builds something and leaves. Every change after that is a new invoice to someone who no longer remembers how it works.",
       },
       {
         n: "03",
-        title: "The strategy deck",
-        body: "There is a roadmap on a slide. Nobody inside can build the first item on it.",
+        title: "Strategy without execution",
+        body: "There is a roadmap. Nobody inside can build the first item on it.",
       },
     ],
   },
@@ -57,7 +54,7 @@ export const deck: Slide[] = [
     kind: "fde",
     heading: "The fix is a small team inside your company that builds and owns the systems",
     definition:
-      "A forward deployed engineer sits with operations, understands the real workflow, and ships software that fixes it. Enterprise software companies place them at customer sites. You can grow them in-house.",
+      "A forward deployed engineer works inside the business, understands the actual workflow, and ships software that fixes it. Enterprise software companies place them at customer sites. We train your own people to do the job.",
     points: [
       "They know your business, so they build the right thing the first time.",
       "They stay, so the systems get maintained and the next one gets built.",
@@ -67,30 +64,23 @@ export const deck: Slide[] = [
   },
   {
     kind: "teacher",
-    heading: "Taught by someone who did this for his own companies",
-    body: "I co-own three operating businesses and built the AI systems that run them, on nights and weekends, while holding an enterprise engineering job. Everything in this deck is in production and I can show you the code.",
-    stats: [
-      { label: "Businesses operated", value: "3" },
-      { label: "Windansea summer revenue", value: "~$400K" },
-      { label: "Fortune 500 deal closed", value: "$300K" },
-      { label: "Process savings at Northrop", value: "$10M+" },
-    ],
+    heading: "Taught by consultants who have shipped this for clients",
+    body: "Every system in this deck was built by our team for a client and is in production today. We have also trained enterprise engineering teams at SnapLogic and Snowflake.",
     roles: [
-      { org: "Snowflake", role: "Solutions Engineer", note: "Current" },
+      {
+        org: "Snowflake",
+        role: "Solutions engineering",
+        note: "Data and AI architecture with enterprise engineering teams",
+      },
       {
         org: "SnapLogic",
-        role: "Enterprise Sales Engineer",
-        note: "Led AI agent bootcamps, built their first GTM sales agent",
+        role: "Enterprise sales engineering",
+        note: "Led AgentCreator bootcamps, built a GTM sales agent, supported a $300K Fortune 500 deal",
       },
       {
-        org: "Northrop Grumman",
-        role: "Systems Engineer",
-        note: "Six years. Managed dev teams on NATO and Global Hawk programs",
-      },
-      {
-        org: "Wonderfly, Windansea Coconuts, WD Capital",
-        role: "Co-owner",
-        note: "Built the operations and AI systems for all three",
+        org: "Client work",
+        role: "Five systems in production",
+        note: "Wonderfly, Windansea Coconuts, WD Capital, Hologram Pilates, Applegate Ventures",
       },
     ],
   },
@@ -100,32 +90,23 @@ export const deck: Slide[] = [
   { kind: "case-study", slug: "hologram-pilates" },
   {
     kind: "enterprise",
-    heading: "And trained enterprise teams to do it",
+    heading: "Enterprise training experience",
     items: [
       {
         org: "SnapLogic",
-        role: "Enterprise Sales Engineer, 2024 to 2026",
+        role: "Enterprise sales engineering, 2024 to 2026",
         proof: [
-          "Led AgentCreator Bootcamps teaching customer teams to build AI agents on their own data",
+          "Led AgentCreator bootcamps teaching customer teams to build AI agents on their own data",
           "Built the company's first GTM sales AI agent",
-          "Closed a $300K Fortune 500 deal",
+          "Supported a $300K Fortune 500 deal",
         ],
       },
       {
         org: "Snowflake",
-        role: "Solutions Engineer, 2026 to present",
+        role: "Solutions engineering, 2026 to present",
         proof: [
-          "Designs data and AI architectures with enterprise engineering teams",
+          "Data and AI architecture with enterprise engineering teams",
           "Sees what works and what stalls across dozens of companies",
-        ],
-      },
-      {
-        org: "Northrop Grumman",
-        role: "Systems Engineer, 2019 to 2024",
-        proof: [
-          "Managed development teams on NATO, MESA, Global Hawk, and SABR",
-          "Process improvements credited with $10M+ in savings",
-          "SECRET clearance",
         ],
       },
     ],
@@ -134,8 +115,7 @@ export const deck: Slide[] = [
   {
     kind: "outcomes",
     heading: "What your team can do when it ends",
-    intro:
-      "Not a certificate. A list of things they could not do in week one and can do unsupervised in week nine.",
+    intro: "Things they could not do in week one and can do unsupervised in week nine.",
   },
   {
     kind: "pricing",
@@ -153,7 +133,7 @@ export const deck: Slide[] = [
   {
     kind: "next",
     heading: "Next step",
-    body: "Reply to the email this came with, or write to the address below. Tell me the one workflow in your company that wastes the most human time. That is the first conversation.",
+    body: "Reply to the email this came with, or write to the address below. Tell us the one workflow in your company that wastes the most human time.",
     steps: [
       "A 30-minute call about that workflow",
       "A one-page proposal naming the system and the cohort",

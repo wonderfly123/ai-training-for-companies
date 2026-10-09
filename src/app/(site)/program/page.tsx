@@ -50,7 +50,7 @@ export default function ProgramPage() {
           <SectionHeading
             eyebrow="Outcomes"
             title="What your team can do when it ends"
-            lede="Not a certificate. Things they could not do in week one and can do unsupervised in week nine."
+            lede="Things they could not do in week one and can do unsupervised in week nine."
           />
           <NumberedList items={program.outcomes} />
         </Container>

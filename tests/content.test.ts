@@ -5,9 +5,9 @@ import { program } from "@/content/program";
 import { faq } from "@/content/faq";
 import { site } from "@/content/site";
 import { forbiddenWords } from "@/content/forbidden-words";
-import { about } from "@/content/about";
+import { about, people } from "@/content/about";
 
-const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about }).toLowerCase();
+const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people }).toLowerCase();
 
 describe("content integrity", () => {
   it("has five case studies with unique slugs", () => {
@@ -20,7 +20,6 @@ describe("content integrity", () => {
     for (const c of caseStudies) {
       expect(c.problem.length, c.slug).toBeGreaterThan(20);
       expect(c.built.length, c.slug).toBeGreaterThan(0);
-      expect(c.stack.length, c.slug).toBeGreaterThan(0);
       expect(c.result.length, c.slug).toBeGreaterThan(10);
       expect(c.lessons.length, c.slug).toBeGreaterThan(0);
       expect(c.screenshot.label.length, c.slug).toBeGreaterThan(5);

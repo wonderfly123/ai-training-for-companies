@@ -10,31 +10,32 @@ export function Hero() {
       <Container className="grid gap-12 py-16 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:py-24">
         <div className="flex flex-col justify-between gap-10">
           <div>
-            <MonoLabel>Fig. 1 &nbsp; The offer</MonoLabel>
+            <MonoLabel>The program</MonoLabel>
             <h1 className="mt-4 max-w-xl font-sans text-4xl font-medium leading-[1.02] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.6rem]">
               {site.tagline}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-              An {site.pricing.weeks}-week program that trains {site.pricing.cohortSize} inside
-              your company to build and own AI systems. One real workflow, shipped to
-              production, by the people who will run it.
+              An {site.pricing.weeks}-week, hands-on program for {site.pricing.cohortSize} at
+              your company. They build one real system from your operations and ship it to
+              production. We teach, review, and support it after.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/deck">Read the deck</Button>
+              <Button href="/deck">View the deck</Button>
               <Button href="/contact" variant="ghost">
-                Talk to Jordan
+                Contact us
               </Button>
             </div>
           </div>
           <p className="max-w-md border-l border-ink pl-4 font-mono text-xs leading-relaxed text-ink-muted">
-            Taught by an owner-operator who built the AI that runs his own three businesses,
-            and who has trained enterprise engineering teams at SnapLogic and Snowflake.
+            Our consultants have built and deployed AI systems for clients in events, consumer
+            products, real estate, and fitness, and trained enterprise engineering teams at
+            SnapLogic and Snowflake.
           </p>
         </div>
         <Figure
           n={1}
           label="Wonderfly SMS agent dashboard, conversation view with handoff flag"
-          caption="A customer service agent built on weekends, answering texts for a Baltimore event venue."
+          caption="A customer service agent built for an event venue client, answering texts around the clock."
           aspect="aspect-[4/3] lg:aspect-[5/4]"
           priority
         />

@@ -45,15 +45,6 @@ export function CaseStudyArticle({ study, n }: CaseStudyArticleProps) {
           <Block label="What was built">
             <NumberedList items={study.built} />
           </Block>
-          <Block label="Stack">
-            <ul className="flex flex-wrap gap-2">
-              {study.stack.map((s) => (
-                <li key={s} className="border border-rule px-2.5 py-1 font-mono text-xs text-ink">
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </Block>
           <Block label="Result">
             <p className="max-w-2xl text-lg leading-relaxed text-ink">{study.result}</p>
           </Block>

@@ -4,7 +4,7 @@ import { caseStudies } from "@/content/case-studies";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const fixed = ["", "/program", "/work", "/about", "/contact"].map((p) => ({
+  const fixed = ["", "/program", "/work", "/people", "/contact"].map((p) => ({
     url: `${site.url}${p}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

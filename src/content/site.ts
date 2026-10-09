@@ -6,7 +6,6 @@ export interface SiteConfig {
   founder: {
     name: string;
     title: string;
-    city: string;
     linkedin: string;
     headshotAlt: string;
   };
@@ -23,21 +22,20 @@ export interface SiteConfig {
 }
 
 /**
- * Single source of truth for anything Jordan will swap later.
- * Every PLACEHOLDER value below is intentional until the domain,
- * email, and booking link exist.
+ * Single source of truth for anything that will be swapped later.
+ * Every PLACEHOLDER value is intentional until the domain, email,
+ * and booking link exist.
  */
 export const site: SiteConfig = {
   name: "AI Training For Companies",
-  tagline: "Your team builds the AI. We teach them how.",
+  tagline: "We train your team to build AI systems in-house.",
   description:
-    "An eight-week program that trains a small team inside your company to build and own AI systems. Taught by an owner-operator who built the AI that runs his own businesses.",
+    "An eight-week program that trains a small team inside your company to build, deploy, and own AI systems. Taught by consultants who have shipped these systems for clients in events, consumer products, real estate, and fitness.",
   url: "https://aitrainingforcompanies.com",
   founder: {
     name: "Jordan Millhausen",
     title: "Founder",
-    city: "Baltimore, MD",
-    linkedin: "https://www.linkedin.com/in/PLACEHOLDER",
+    linkedin: "https://www.linkedin.com/in/jordan-millhausen",
     headshotAlt: "Jordan Millhausen",
   },
   contact: {

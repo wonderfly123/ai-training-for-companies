@@ -52,13 +52,6 @@ export function CaseStudyBody({ study, n }: { study: CaseStudy; n: number }) {
               </li>
             ))}
           </ol>
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {study.stack.slice(0, 6).map((s) => (
-              <span key={s} className="border border-rule px-1.5 py-0.5 font-mono text-[10px] text-ink-muted">
-                {s}
-              </span>
-            ))}
-          </div>
         </div>
         <div className="flex flex-col gap-5">
           <Figure n={n} label={study.screenshot.label} src={study.screenshot.src} aspect="aspect-[16/10]" />
@@ -83,7 +76,7 @@ export function EnterpriseBody({ slide }: { slide: Extract<"enterprise"> }) {
   return (
     <div>
       <SlideTitle>{slide.heading}</SlideTitle>
-      <div className="mt-12 grid gap-px border border-rule bg-rule lg:grid-cols-3">
+      <div className="mt-12 grid gap-px border border-rule bg-rule lg:grid-cols-2">
         {slide.items.map((it) => (
           <div key={it.org} className="bg-paper p-6">
             <h3 className="font-sans text-2xl font-medium text-ink">{it.org}</h3>

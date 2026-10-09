@@ -10,7 +10,7 @@ export function HowItWorks() {
       <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <div>
           <SectionHeading
-            eyebrow="Fig. 3 &nbsp; The fix"
+            eyebrow="The approach"
             title={fde && fde.kind === "fde" ? fde.heading : "A small team inside your company"}
             lede={fde && fde.kind === "fde" ? fde.definition : undefined}
           />

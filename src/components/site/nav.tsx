@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 const links = [
   { href: "/program", label: "Program" },
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/people", label: "People" },
   { href: "/deck", label: "Deck" },
   { href: "/contact", label: "Contact" },
 ];
@@ -17,9 +17,6 @@ export function Nav() {
         <Link href="/" className="flex items-baseline gap-3">
           <span className="font-sans text-base font-semibold tracking-[-0.01em] text-ink">
             {site.name}
-          </span>
-          <span className="hidden font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted sm:inline">
-            {site.founder.city}
           </span>
         </Link>
         <nav aria-label="Primary">

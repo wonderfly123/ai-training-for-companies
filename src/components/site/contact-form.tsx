@@ -47,7 +47,7 @@ export function ContactForm() {
     return (
       <div className="border border-ink p-6">
         <p className="font-mono text-xs uppercase tracking-[0.14em] text-accent">Received</p>
-        <p className="mt-2 text-lg text-ink">Thanks. I read every one of these myself and reply within two business days.</p>
+        <p className="mt-2 text-lg text-ink">Thanks. We read every one of these and reply within two business days.</p>
       </div>
     );
   }

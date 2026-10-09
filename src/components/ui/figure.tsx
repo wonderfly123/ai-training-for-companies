@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface FigureProps {
-  /** Figure number shown in the caption, e.g. 3 renders "Fig. 3". */
+  /** Kept for call-site compatibility. Not rendered. */
   n?: number | string;
   /** What the screenshot shows. Rendered inside the placeholder until `src` exists. */
   label: string;
@@ -50,11 +50,8 @@ export function Figure({
           </div>
         )}
       </div>
-      {(n !== undefined || caption) && (
-        <figcaption className="mt-2 flex gap-3 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
-          {n !== undefined && <span className="shrink-0">Fig. {n}</span>}
-          {caption && <span className="normal-case tracking-normal">{caption}</span>}
-        </figcaption>
+      {caption && (
+        <figcaption className="mt-2 font-mono text-[11px] text-ink-muted">{caption}</figcaption>
       )}
     </figure>
   );

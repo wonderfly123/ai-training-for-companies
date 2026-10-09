@@ -8,7 +8,7 @@ export function Problem() {
   return (
     <section className="border-b border-rule">
       <Container className="py-20">
-        <SectionHeading eyebrow="Fig. 2 &nbsp; The problem" title={slide.heading} />
+        <SectionHeading eyebrow="The problem" title={slide.heading} />
         <div className="mt-12 grid gap-px border border-rule bg-rule md:grid-cols-3">
           {slide.points.map((p) => (
             <div key={p.n} className="bg-paper p-6">

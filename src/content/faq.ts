@@ -11,7 +11,7 @@ export const faq: FaqItem[] = [
   {
     question: "What is AI training for companies?",
     answer:
-      "AI training for companies is a program that teaches a company's own employees to build and run AI systems instead of buying them from a vendor. In this program, a cohort of four to eight people picks one real workflow from their operations and ships a working AI system to production in eight weeks, with an instructor who has built the same kind of systems for his own businesses.",
+      "AI training for companies is a program that teaches a company's own employees to build and run AI systems instead of buying them from a vendor. In this program, a cohort of four to eight people picks one real workflow from their operations and ships a working AI system to production in eight weeks, with instructors who have built the same kind of systems for clients.",
   },
   {
     question: "What is a forward deployed engineer?",
@@ -46,6 +46,6 @@ export const faq: FaqItem[] = [
   {
     question: "Who teaches the program?",
     answer:
-      "Jordan Millhausen. He co-owns three operating businesses and built the AI and automation systems that run them, including a customer service text agent, a daily document-writing pipeline, and a CRM lead pipeline that replaced Zapier. He is a Solutions Engineer at Snowflake, previously led AI agent bootcamps at SnapLogic, and spent six years as a systems engineer at Northrop Grumman.",
+      "Consultants who have built and deployed AI systems for clients. The program is led by founder Jordan Millhausen, who has shipped a customer service text agent, a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, and a hologram control application for clients in events, consumer products, real estate, and fitness. He is a Solutions Engineer at Snowflake and previously led the AgentCreator bootcamps at SnapLogic.",
   },
 ];

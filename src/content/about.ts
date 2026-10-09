@@ -5,89 +5,107 @@ export interface CareerEntry {
   notes: string[];
 }
 
-export interface About {
+export interface Person {
+  slug: string;
+  name: string;
+  title: string;
   lede: string;
-  /** Short version used on the home page. */
-  shortBio: string[];
-  /** Long version used on /about. */
   bio: string[];
   career: CareerEntry[];
-  /** Compressed career rows for the home page table. */
+  linkedin: string;
+  headshotLabel: string;
+}
+
+export interface About {
+  lede: string;
+  intro: string;
+  /** Company description used on the home page. */
+  shortBio: string[];
+  /** Facts table for the home page. */
   careerShort: { label: string; value: string }[];
 }
 
 export const about: About = {
-  lede: "Mechanical engineer by degree, systems engineer by training, business owner by accident, AI builder by necessity.",
+  lede: "The team",
+  intro:
+    "AI Training For Companies is run by consultants who build AI systems for clients and then teach client teams to build the next ones. Every instructor has shipped production systems. None of them teach from slides alone.",
   shortBio: [
-    "I co-own three businesses: an event venue company, a branded coconut company, and a real estate brokerage. None of them had a technology team, so I became it. On nights and weekends I built the systems that run them: a text agent that answers customers, a pipeline that writes the crew's run sheets every morning, a lead engine that replaced Zapier.",
-    "During the day I work with enterprise engineering teams on data and AI architecture. At SnapLogic I ran the bootcamps that taught customer teams to build their own agents. I know what makes those teams stall, and what gets them shipping.",
-  ],
-  bio: [
-    "I did not set out to build software. I set out to run businesses, and the businesses kept needing software nobody was going to build for them. So I learned to build it, on nights and weekends, while working full time as an engineer.",
-    "The first system was a bot that answered customer questions for our event venues. Then an operations app for the coconut company so a closed deal became a tracked event without anyone retyping it. Then a lead pipeline for the brokerage that replaced a tangle of Zapier steps. Each one taught me what actually matters when AI meets a real business: integrations, idempotency, human handoff, and knowing when a cron job beats an agent.",
-    "My day job puts me in rooms with enterprise engineering teams trying to do the same thing at a larger scale. At SnapLogic I ran the bootcamps that taught customer teams to build their own agents. I have seen what makes teams stall and what gets them shipping, and that is what this program is built on.",
-  ],
-  career: [
-    {
-      when: "2026 to now",
-      org: "Snowflake",
-      role: "Solutions Engineer",
-      notes: ["Data and AI architecture with enterprise engineering teams"],
-    },
-    {
-      when: "2024 to 2026",
-      org: "SnapLogic",
-      role: "Enterprise Sales Engineer",
-      notes: [
-        "Led AgentCreator Bootcamps teaching customer teams to build AI agents",
-        "Built the company's first GTM sales AI agent",
-        "Closed a $300K Fortune 500 deal",
-      ],
-    },
-    {
-      when: "2019 to 2024",
-      org: "Northrop Grumman",
-      role: "Systems Engineer",
-      notes: [
-        "Managed development teams on NATO, MESA, Global Hawk, and SABR programs",
-        "Process improvements credited with $10M+ in savings",
-        "SECRET clearance",
-      ],
-    },
-    {
-      when: "2020 to now",
-      org: "Wonderfly",
-      role: "Co-owner, Solutions Architect",
-      notes: ["Event venues in Baltimore. Built the SMS agent, ops systems, and content engine"],
-    },
-    {
-      when: "Ongoing",
-      org: "Windansea Coconuts",
-      role: "Co-owner",
-      notes: [
-        "Branded coconuts for resorts and events. ~$400K summer revenue, two years running. Built the operations app",
-      ],
-    },
-    {
-      when: "2026 to now",
-      org: "WD Capital",
-      role: "Co-founder",
-      notes: [
-        "Real estate brokerage and syndication. Built the lead pipeline, dashboard, and investor onboarding",
-      ],
-    },
-    {
-      when: "2018",
-      org: "University of Maryland, College Park",
-      role: "B.S. Mechanical Engineering",
-      notes: ["Dean's List. Two-time Bongsoon Kim TerpStart Scholarship recipient"],
-    },
+    "AI Training For Companies is a consultancy. Our team has designed, built, and deployed AI and automation systems for clients in events, consumer products, real estate, and fitness, and has trained enterprise engineering teams at SnapLogic and Snowflake.",
+    "The program exists because the same lesson came up at every client: systems built by outsiders stop improving the day the outsiders leave. The durable fix is a team inside the company that can build and maintain them.",
   ],
   careerShort: [
-    { label: "Now", value: "Solutions Engineer, Snowflake" },
-    { label: "2024 to 2026", value: "Enterprise Sales Engineer, SnapLogic" },
-    { label: "2019 to 2024", value: "Systems Engineer, Northrop Grumman" },
-    { label: "2020 to now", value: "Co-owner, Wonderfly, Windansea Coconuts, WD Capital" },
-    { label: "Education", value: "B.S. Mechanical Engineering, University of Maryland" },
+    { label: "Founder", value: "Jordan Millhausen" },
+    { label: "Team", value: "Jordan Millhausen, Anthony Huni" },
+    { label: "Client systems", value: "5 in production across 4 industries" },
+    { label: "Enterprise training", value: "SnapLogic AgentCreator bootcamps" },
   ],
 };
+
+export const people: Person[] = [
+  {
+    slug: "jordan-millhausen",
+    name: "Jordan Millhausen",
+    title: "Founder and lead instructor",
+    lede: "Designed and shipped every client system shown on this site, and leads the program.",
+    bio: [
+      "Jordan Millhausen is a Solutions Engineer at Snowflake, where he works with enterprise engineering teams on data and AI architecture. Before that he was an Enterprise Sales Engineer at SnapLogic, where he led the AgentCreator bootcamps that taught customer teams to build their own AI agents and built the company's first GTM sales agent.",
+      "As a consultant he has designed and deployed AI and operations systems for clients including Wonderfly, Windansea Coconuts, WD Capital, Hologram Pilates, and Applegate Ventures: a customer service text agent with human handoff, a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, a hologram control application, and a lead-routing website. All of them are in production.",
+      "He holds a B.S. in Mechanical Engineering from the University of Maryland.",
+    ],
+    career: [
+      {
+        when: "2026 to now",
+        org: "Snowflake",
+        role: "Solutions Engineer",
+        notes: ["Data and AI architecture with enterprise engineering teams"],
+      },
+      {
+        when: "2024 to 2026",
+        org: "SnapLogic",
+        role: "Enterprise Sales Engineer",
+        notes: [
+          "Led AgentCreator bootcamps teaching customer teams to build AI agents",
+          "Built the company's first GTM sales AI agent",
+          "Supported a $300K Fortune 500 deal",
+        ],
+      },
+      {
+        when: "2020 to now",
+        org: "Client work",
+        role: "AI and operations systems consultant",
+        notes: [
+          "Wonderfly: customer service SMS agent, operations systems, content engine",
+          "Windansea Coconuts: event and wholesale operations app, daily Run of Show pipeline",
+          "WD Capital: lead pipeline, monitoring dashboard, investor onboarding",
+          "Hologram Pilates: control app for video, lights, and sound",
+          "Applegate Ventures: lead-routing website",
+        ],
+      },
+      {
+        when: "2018",
+        org: "University of Maryland, College Park",
+        role: "B.S. Mechanical Engineering",
+        notes: ["Dean's List. Two-time Bongsoon Kim TerpStart Scholarship recipient"],
+      },
+    ],
+    linkedin: "https://www.linkedin.com/in/jordan-millhausen",
+    headshotLabel: "Jordan Millhausen, headshot",
+  },
+  {
+    slug: "anthony-huni",
+    name: "Anthony Huni",
+    title: "PLACEHOLDER title",
+    lede: "PLACEHOLDER: one line on Anthony's role in the program.",
+    bio: ["PLACEHOLDER: Anthony's background, what he has built or run, and what he does in the program."],
+    career: [
+      {
+        when: "PLACEHOLDER",
+        org: "PLACEHOLDER organization",
+        role: "PLACEHOLDER role",
+        notes: ["PLACEHOLDER: one line of proof"],
+      },
+    ],
+    linkedin: "https://www.linkedin.com/in/PLACEHOLDER",
+    headshotLabel: "Anthony Huni, headshot",
+  },
+];

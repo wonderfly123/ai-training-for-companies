@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/site/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Ask about an ${site.pricing.weeks}-week AI training cohort for your company. Tell Jordan the workflow that wastes the most human time and he will reply within two business days.`,
+  description: `Ask about an ${site.pricing.weeks}-week AI training cohort for your company. Tell us the workflow that wastes the most human time and we will reply within two business days.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -19,8 +19,8 @@ export default function ContactPage() {
           <SectionHeading
             as="h1"
             eyebrow="Contact"
-            title="Start with the workflow, not the technology"
-            lede="Tell me the one process in your company where people retype, wait, or guess. I will tell you honestly whether an eight-week cohort can fix it."
+            title="Tell us about the workflow"
+            lede="Tell me the one process in your company where people retype, wait, or guess. We will tell you whether an eight-week cohort can fix it."
           />
           <dl className="mt-10 space-y-5 border-t border-ink pt-6">
             <div>
@@ -40,8 +40,8 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
-              <dt><MonoLabel>Based in</MonoLabel></dt>
-              <dd className="text-lg text-ink">{site.founder.city}. Cohorts run on site or remote.</dd>
+              <dt><MonoLabel>Where</MonoLabel></dt>
+              <dd className="text-lg text-ink">Cohorts run on site or remote.</dd>
             </div>
           </dl>
         </div>

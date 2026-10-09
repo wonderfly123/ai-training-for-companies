@@ -24,12 +24,7 @@ export function CaseStudyCard({ study, n }: CaseStudyCardProps) {
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-ink-muted">{study.summary}</p>
       </div>
-      <div className="flex flex-wrap gap-x-3 gap-y-1">
-        {study.stack.slice(0, 4).map((s) => (
-          <span key={s} className="font-mono text-[11px] text-ink-muted">
-            {s}
-          </span>
-        ))}
+      <div className="flex">
         <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-ink group-hover:text-accent">
           Read &rarr;
         </span>

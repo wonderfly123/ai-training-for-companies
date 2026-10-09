@@ -11,12 +11,6 @@ export function organization() {
     url: site.url,
     email: site.contact.email,
     founder: { "@type": "Person" as const, name: site.founder.name },
-    address: {
-      "@type": "PostalAddress" as const,
-      addressLocality: "Baltimore",
-      addressRegion: "MD",
-      addressCountry: "US",
-    },
     sameAs: [site.founder.linkedin],
   };
 }
@@ -27,7 +21,7 @@ export function person() {
     "@type": "Person" as const,
     name: site.founder.name,
     jobTitle: `${site.founder.title}, ${site.name}`,
-    url: `${site.url}/about`,
+    url: `${site.url}/people#jordan-millhausen`,
     worksFor: { "@type": "Organization" as const, name: site.name, url: site.url },
     sameAs: [site.founder.linkedin],
   };

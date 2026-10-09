@@ -7,8 +7,8 @@ export function FaqList() {
     <section className="border-b border-rule" id="faq">
       <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <SectionHeading
-          eyebrow="Fig. 7 &nbsp; Questions"
-          title="Direct answers to the questions people actually ask"
+          eyebrow="Questions"
+          title="Common questions"
         />
         <div className="border-t border-ink">
           {faq.map((item) => (
