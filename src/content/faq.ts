@@ -29,6 +29,11 @@ export const faq: FaqItem[] = [
       "A three-day intensive is enough for a team to build a working system against real data with guidance. Eight weeks is enough to ship one to production and own it. Becoming fully independent takes a second and third project, which is why every format ends with a ranked list of what to build next.",
   },
   {
+    question: "Do you teach how to use AI tools, or only how to build systems?",
+    answer:
+      "Both. Most teams already have ChatGPT, Copilot, or Gemini and use them like a search box. The people getting ten times the output work differently: they run Claude Code and Codex from the terminal, hand multi-step work to agents, and script the repetitive parts. Every format includes hands-on time on that way of working, applied to each person's real tasks, alongside building a system.",
+  },
+  {
     question: "Do my employees need to be programmers?",
     answer:
       "No. The best teams mix operations people who know where the problems are with one or two people who are comfortable with code or data. Modern AI tooling lets non-programmers go further than they expect, and the program is structured so each person contributes where they are strongest.",

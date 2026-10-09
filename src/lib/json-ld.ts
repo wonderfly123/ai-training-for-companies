@@ -43,7 +43,7 @@ export function service() {
       name: o.name,
       price: String(o.priceUsd),
       priceCurrency: "USD",
-      url: `${site.url}/offerings#${o.slug}`,
+      url: `${site.url}/offerings/${o.slug}`,
       description: `${o.duration}. ${o.format}. ${o.outcome}`,
     })),
   };

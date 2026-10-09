@@ -23,6 +23,12 @@ export const pitch = {
     "They know the business, so they build the right thing first.",
     "They stay, so the systems get maintained and the next one gets built.",
   ],
+  fluencyHeading: "Your team has ChatGPT. The best AI users work differently.",
+  fluency: [
+    "Most teams use AI like a search box.",
+    "The best users run Claude Code and Codex, hand work to agents, and script the rest.",
+    "We teach that way of working on your team\u2019s real tasks.",
+  ],
   offeringsHeading: "Three ways to work with us",
   offeringsSub: "Your team builds. We teach, review, and support it after.",
   outcomesHeading: "What your team can do after",

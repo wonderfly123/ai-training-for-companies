@@ -111,6 +111,14 @@ function light(section: string, title: string) {
   lines(s, pitch.fix, M, 1.75, CW, 0.85, 16);
 }
 
+// 3b. Fluency
+{
+  const s = light("Fluency", pitch.fluencyHeading);
+  pitch.fluency.forEach((p, i) => {
+    text(s, p, { x: M, y: 1.75 + i * 0.95, w: CW, h: 0.8, fontSize: 22, color: i === 2 ? C.text1 : C.text2 });
+  });
+}
+
 // 4. Offerings
 {
   const s = light("Offerings", pitch.offeringsHeading);
@@ -181,4 +189,4 @@ pitch.cases.forEach((c, i) => {
 
 await pres.writeFile({ fileName: OUT });
 await applyTheme(OUT, THEME);
-console.log(`wrote ${OUT} (${7 + pitch.cases.length} slides)`);
+console.log(`wrote ${OUT} (${8 + pitch.cases.length} slides)`);

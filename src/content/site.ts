@@ -31,7 +31,7 @@ export const site: SiteConfig = {
   name: "AI Training For Companies",
   tagline: "We train your team to build AI systems in-house.",
   description:
-    "Training for companies that want their own people to build AI: a one-day workshop at your office, a three-day remote intensive, or an eight-week cohort that ships a system to production. Taught by consultants who have built these systems for clients.",
+    "Hands-on AI training for companies: build AI systems your team owns, and learn to work with AI the way the best users do, with Claude Code, Codex, and agents on your real tasks. A one-day workshop, a three-day intensive, or an eight-week cohort.",
   url: "https://aitrainingforcompanies.com",
   founder: {
     name: "Jordan Millhausen",

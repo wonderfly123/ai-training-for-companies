@@ -13,8 +13,8 @@ export function Hero() {
           {site.tagline}
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted">
-          Hands-on training that leaves your company with working AI systems and the people
-          who can build the next one.
+          Hands-on training in two things: building AI systems your company owns, and working
+          with AI the way the people getting ten times the output do.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="/offerings">See the offerings</Button>

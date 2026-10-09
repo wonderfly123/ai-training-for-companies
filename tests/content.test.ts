@@ -9,8 +9,9 @@ import { about, people } from "@/content/about";
 import { metrics } from "@/content/metrics";
 import { pitch } from "@/content/pitch";
 import { offerings } from "@/content/offerings";
+import { fluency } from "@/content/fluency";
 
-const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch, offerings }).toLowerCase();
+const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch, offerings, fluency }).toLowerCase();
 
 describe("content integrity", () => {
   it("has five case studies with unique slugs", () => {
@@ -63,7 +64,12 @@ describe("content integrity", () => {
 
   it("has three offerings with prices", () => {
     expect(offerings).toHaveLength(3);
-    for (const o of offerings) expect(o.priceUsd).toBeGreaterThan(0);
+    for (const o of offerings) {
+      expect(o.priceUsd).toBeGreaterThan(0);
+      expect(o.agenda.length, o.slug).toBeGreaterThanOrEqual(3);
+      expect(o.walkAway.length, o.slug).toBeGreaterThanOrEqual(3);
+      expect(o.before.length, o.slug).toBeGreaterThanOrEqual(2);
+    }
   });
 
   it("program has three summary steps", () => {

@@ -4,6 +4,7 @@ import { Hero } from "@/components/site/hero";
 import { ProofStrip } from "@/components/site/proof-strip";
 import { Problem } from "@/components/site/problem";
 import { HowItWorks } from "@/components/site/how-it-works";
+import { FluencyBlock } from "@/components/site/fluency-block";
 import { CaseStudyGrid } from "@/components/site/case-study-grid";
 import { OfferingsSummary } from "@/components/site/offerings-summary";
 import { AboutBlock } from "@/components/site/about-block";
@@ -27,6 +28,7 @@ export default function HomePage() {
       <ProofStrip />
       <Problem />
       <HowItWorks />
+      <FluencyBlock />
       <CaseStudyGrid />
       <OfferingsSummary />
       <AboutBlock />
