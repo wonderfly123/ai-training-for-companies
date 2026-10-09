@@ -5,7 +5,7 @@ import { ContactCta } from "@/components/site/contact-cta";
 export const metadata: Metadata = {
   title: "AI Systems Built In-House, Case Studies",
   description:
-    "Five AI and automation systems we built for clients: a customer service text agent, an operations app, a CRM lead pipeline, a hologram control app, and a client site.",
+    "AI and automation systems we built for clients: a customer service text agent, an operations app, a CRM lead pipeline with a public lead-routing site, and a hologram control app.",
   alternates: { canonical: "/work" },
 };
 

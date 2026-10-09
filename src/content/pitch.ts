@@ -50,7 +50,7 @@ export const pitch = {
       result: "A closed deal becomes a staffed event with a current run sheet, with nobody retyping it.",
     },
     {
-      company: "WD Capital",
+      company: "Applegate Ventures",
       title: "A lead pipeline that replaced Zapier",
       problem: "Property leads arrived through a chain of Zapier steps that duplicated records and failed silently.",
       built: "One pipeline that scores, dedupes, and pushes leads to HubSpot, with a dashboard and replay.",

@@ -80,7 +80,7 @@ export const deck: Slide[] = [
       {
         org: "Client work",
         role: "Ten systems in production",
-        note: "Wonderfly, Windansea Coconuts, WD Capital, Hologram Pilates, Applegate Ventures",
+        note: "Wonderfly, Windansea Coconuts, Applegate Ventures, Hologram Pilates",
       },
     ],
   },

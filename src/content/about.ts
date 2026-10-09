@@ -50,7 +50,7 @@ export const people: Person[] = [
     lede: "Designed and shipped every client system shown on this site, and leads the program.",
     bio: [
       "Jordan Millhausen is a Solutions Engineer at Snowflake, where he works with enterprise engineering teams on data and AI architecture. Before that he was an Enterprise Sales Engineer at SnapLogic, where he led the AgentCreator bootcamps that taught customer teams to build their own AI agents and built the company's first GTM sales agent.",
-      "As a consultant he has designed and deployed AI and operations systems for clients including Wonderfly, Windansea Coconuts, WD Capital, Hologram Pilates, and Applegate Ventures: a customer service text agent with human handoff, an event operations app with a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, a hologram control application, and a lead-routing website. All of them are in production.",
+      "As a consultant he has designed and deployed AI and operations systems for clients including Wonderfly, Windansea Coconuts, Applegate Ventures, and Hologram Pilates: a customer service text agent with human handoff, an event operations app with a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, a hologram control application, and a lead-routing website. All of them are in production.",
       "He holds a B.S. in Mechanical Engineering from the University of Maryland.",
     ],
     career: [
@@ -77,9 +77,8 @@ export const people: Person[] = [
         notes: [
           "Wonderfly: customer service SMS agent, operations systems, content engine",
           "Windansea Coconuts: event and wholesale operations app, daily Run of Show pipeline",
-          "WD Capital: lead pipeline, monitoring dashboard, investor onboarding",
+          "Applegate Ventures: lead pipeline, monitoring dashboard, investor onboarding, and website",
           "Hologram Pilates: control app for video, lights, and sound",
-          "Applegate Ventures: lead-routing website",
         ],
       },
       {

@@ -13,10 +13,10 @@ import { offerings } from "@/content/offerings";
 const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch, offerings }).toLowerCase();
 
 describe("content integrity", () => {
-  it("has five case studies with unique slugs", () => {
+  it("has four case studies with unique slugs", () => {
     const slugs = caseStudies.map((c) => c.slug);
-    expect(slugs).toHaveLength(5);
-    expect(new Set(slugs).size).toBe(5);
+    expect(slugs).toHaveLength(4);
+    expect(new Set(slugs).size).toBe(4);
   });
 
   it("every case study has all sections filled", () => {

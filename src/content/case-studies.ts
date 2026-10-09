@@ -75,12 +75,12 @@ export const caseStudies: CaseStudy[] = [
     },
   },
   {
-    slug: "wd-capital",
-    company: "WD Capital",
+    slug: "applegate-ventures",
+    company: "Applegate Ventures",
     role: "Client project",
     title: "A lead pipeline that replaced Zapier and showed its work",
     summary:
-      "WD Capital is a real estate brokerage and syndication company. Deal flow depends on finding distressed and off-market properties before anyone else and getting them into the CRM clean.",
+      "Applegate Ventures buys homes as-is for cash in four states and partners with investors on deals. Deal flow depends on finding distressed and off-market properties first and getting them into the CRM clean.",
     problem:
       "New property leads arrived as webhooks from a data provider. A chain of Zapier steps tried to clean and push them into HubSpot. It was slow, duplicated records when two webhooks arrived together, failed quietly, and nobody could see what had happened to a given lead.",
     built: [
@@ -89,10 +89,11 @@ export const caseStudies: CaseStudy[] = [
       "An admin dashboard listing every delivery with a detail view and a replay button that re-runs a stored payload through the pipeline.",
       "Mapping of foreclosure stage, sale date, and property type to HubSpot's allowed values, with an email alert when an invariant breaks.",
       "Investor onboarding forms that write to HubSpot, plus a skip-trace import across six states.",
+      "A public site with separate seller and investor paths, and server-validated offer and investor forms that label each lead by source.",
       "A separate deal-finding engine that mines county parcel data near substations and highway interchanges to surface cheap industrial land worth a letter.",
     ],
     result:
-      "Zapier is gone. Leads land in HubSpot in seconds with a full audit trail, and any failure can be replayed from the dashboard. The company has serviced million-dollar transactions on top of this pipeline.",
+      "Zapier is gone. Leads land in HubSpot in seconds with a full audit trail, and any failure can be replayed from the dashboard. Seller and investor leads arrive with the details already filled in. The company has serviced million-dollar transactions on top of this pipeline.",
     lessons: [
       "When to replace no-code glue with code you own",
       "Locks, dedupe, and replay as the difference between a demo and an operation",
@@ -100,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
       "Scoring and filtering data so humans only see what is worth their time",
     ],
     screenshot: {
-      label: "WD Capital admin webhook dashboard with replay",
+      label: "Applegate Ventures admin webhook dashboard with replay",
     },
   },
   {
@@ -127,31 +128,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     screenshot: {
       label: "Hologram Pilates control app, class playback screen",
-    },
-  },
-  {
-    slug: "applegate-ventures",
-    company: "Applegate Ventures",
-    role: "Client project",
-    title: "A home-buying and investor site with lead routing",
-    summary:
-      "Applegate Ventures buys homes as-is for cash in four states and partners with investors on deals. They needed a site that turns visitors into offer requests and investor conversations.",
-    problem:
-      "Two different audiences, sellers and investors, landed on one generic page with a contact email. Nothing captured what the seller's property was or how much an investor wanted to deploy, so every lead started with a phone call to find out.",
-    built: [
-      "A Next.js site with separate seller and investor paths: how it works, get an offer, invest with us, about.",
-      "Offer and investor forms with validation on the server, field limits, and email delivery that labels which form the lead came from.",
-      "Proof sections built from the client's real track record: $12M+ acquired and a 59 percent average IRR on completed deals.",
-    ],
-    result:
-      "Leads arrive with the property details or investment range already filled in. The site shipped in days, not months, because it was built on the same patterns used across our other client systems.",
-    lessons: [
-      "Shipping a complete, validated lead funnel fast",
-      "Server-side validation at the boundary, every time",
-      "Reusing patterns across projects so each build gets faster",
-    ],
-    screenshot: {
-      label: "Applegate Ventures homepage and offer form",
     },
   },
 ];
