@@ -9,15 +9,18 @@ export function Problem() {
     <section className="border-b border-rule">
       <Container className="py-20">
         <SectionHeading eyebrow="The problem" title={slide.heading} />
-        <div className="mt-12 grid gap-px border border-rule bg-rule md:grid-cols-3">
+        <ol className="mt-12 max-w-4xl border-t border-ink">
           {slide.points.map((p) => (
-            <div key={p.n} className="bg-paper p-6">
-              <span className="font-mono text-xs text-accent">{p.n}</span>
-              <h3 className="mt-3 font-sans text-xl font-medium text-ink">{p.title}</h3>
-              <p className="mt-3 text-base leading-relaxed text-ink-muted">{p.body}</p>
-            </div>
+            <li
+              key={p.n}
+              className="grid gap-3 border-b border-rule py-7 sm:grid-cols-[4rem_16rem_1fr] sm:gap-8"
+            >
+              <span className="font-mono text-sm text-ink-muted">{p.n}</span>
+              <h3 className="font-sans text-2xl font-medium leading-tight text-ink">{p.title}</h3>
+              <p className="text-base leading-relaxed text-ink-muted">{p.body}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </Container>
     </section>
   );
