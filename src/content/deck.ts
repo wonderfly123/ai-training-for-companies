@@ -86,7 +86,7 @@ export const deck: Slide[] = [
   },
   { kind: "case-study", slug: "wonderfly" },
   { kind: "case-study", slug: "windansea-coconuts" },
-  { kind: "case-study", slug: "wd-capital" },
+  { kind: "case-study", slug: "applegate-ventures" },
   { kind: "case-study", slug: "hologram-pilates" },
   {
     kind: "enterprise",
