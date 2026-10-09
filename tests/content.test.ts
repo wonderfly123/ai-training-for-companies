@@ -7,8 +7,9 @@ import { site } from "@/content/site";
 import { forbiddenWords } from "@/content/forbidden-words";
 import { about, people } from "@/content/about";
 import { metrics } from "@/content/metrics";
+import { pitch } from "@/content/pitch";
 
-const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics }).toLowerCase();
+const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch }).toLowerCase();
 
 describe("content integrity", () => {
   it("has five case studies with unique slugs", () => {
