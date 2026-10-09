@@ -5,8 +5,9 @@ import { program } from "@/content/program";
 import { faq } from "@/content/faq";
 import { site } from "@/content/site";
 import { forbiddenWords } from "@/content/forbidden-words";
+import { about } from "@/content/about";
 
-const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site }).toLowerCase();
+const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about }).toLowerCase();
 
 describe("content integrity", () => {
   it("has five case studies with unique slugs", () => {
@@ -45,6 +46,21 @@ describe("content integrity", () => {
       expect(f.question.endsWith("?"), f.question).toBe(true);
       expect(f.answer.length, f.question).toBeGreaterThan(40);
     }
+  });
+
+  it("faq includes the three AEO target questions verbatim", () => {
+    const questions = faq.map((f) => f.question);
+    for (const q of [
+      "What is a forward deployed engineer?",
+      "How much does AI training for a company cost?",
+      "How long does it take to train an AI engineer?",
+    ]) {
+      expect(questions, q).toContain(q);
+    }
+  });
+
+  it("program has three summary steps", () => {
+    expect(program.steps).toHaveLength(3);
   });
 
   it("contains no forbidden marketing words", () => {

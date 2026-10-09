@@ -4,8 +4,16 @@ export interface Week {
   body: string;
 }
 
+export interface Step {
+  n: string;
+  title: string;
+  body: string;
+}
+
 export interface Program {
   name: string;
+  /** The three-step summary used on the home page. */
+  steps: Step[];
   summary: string;
   weeks: Week[];
   outcomes: string[];
@@ -18,6 +26,23 @@ export const program: Program = {
   name: "The eight-week cohort",
   summary:
     "Four to eight people from your company, one real system picked from your own operations, shipped to production by week eight. Your team builds it. I teach, review, and keep it on the rails.",
+  steps: [
+    {
+      n: "01",
+      title: "Pick the system",
+      body: "We map your operations and choose one workflow where people retype, wait, or guess. Small enough to ship in eight weeks, real enough to matter.",
+    },
+    {
+      n: "02",
+      title: "Your team builds it",
+      body: "Four to eight of your people write the code, wire the integrations, and make the decisions. I teach, review, and keep it on the rails.",
+    },
+    {
+      n: "03",
+      title: "Your team owns it",
+      body: "It ships to production with monitoring, human handoff, and a runbook. The people who built it keep building. No retainer, no vendor.",
+    },
+  ],
   deliverable:
     "One working AI system running inside your company, owned and understood by the people who built it, plus a runbook and a list of what to build next.",
   weeks: [
