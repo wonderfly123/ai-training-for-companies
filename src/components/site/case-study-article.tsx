@@ -2,7 +2,6 @@ import type { CaseStudy } from "@/content/case-studies";
 import { Container } from "@/components/ui/container";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { Figure } from "@/components/ui/figure";
-import { KvTable } from "@/components/ui/kv-table";
 import { NumberedList } from "@/components/ui/numbered-list";
 
 interface CaseStudyArticleProps {
@@ -33,9 +32,8 @@ export function CaseStudyArticle({ study, n }: CaseStudyArticleProps) {
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted">{study.summary}</p>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
-          <Figure n={n} label={study.screenshot.label} src={study.screenshot.src} caption={study.screenshot.label} aspect="aspect-[16/10]" />
-          <KvTable rows={study.numbers} />
+        <div className="mt-12 max-w-4xl">
+          <Figure label={study.screenshot.label} src={study.screenshot.src} caption={study.screenshot.label} aspect="aspect-[16/10]" />
         </div>
 
         <div className="mt-12">

@@ -12,7 +12,6 @@ export interface CaseStudy {
   problem: string;
   built: string[];
   result: string;
-  numbers: Stat[];
   lessons: string[];
   screenshot: { label: string; src?: string };
 }
@@ -36,11 +35,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     result:
       "Weekend texts get an answer in seconds instead of on Monday. Staff only touch the conversations the agent flags.",
-    numbers: [
-      { label: "Response time", value: "Seconds, around the clock" },
-      { label: "Brands on the content engine", value: "3" },
-      { label: "Human handoff", value: "Confidence threshold to Discord" },
-    ],
     lessons: [
       "How to wire an LLM to a real phone line and a real database",
       "Why the agent's job is to answer and collect, not to act, until it has earned it",
@@ -70,11 +64,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     result:
       "A closed deal becomes a tracked event with a completed intake form and a current run sheet without anyone retyping it. Failures email the owner with the payload, so nothing fails silently.",
-    numbers: [
-      { label: "Revenue", value: "$1M+" },
-      { label: "Systems connected", value: "4" },
-      { label: "Run of Show", value: "Written daily by Claude" },
-    ],
     lessons: [
       "Webhooks as the backbone of business automation",
       "Idempotency, retries, and dry-run modes before you trust a bot with production data",
@@ -104,11 +93,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     result:
       "Zapier is gone. Leads land in HubSpot in seconds with a full audit trail, and any failure can be replayed from the dashboard. The company has serviced million-dollar transactions on top of this pipeline.",
-    numbers: [
-      { label: "Transactions serviced", value: "Million-dollar" },
-      { label: "Zapier steps remaining", value: "0" },
-      { label: "Skip-trace states", value: "6" },
-    ],
     lessons: [
       "When to replace no-code glue with code you own",
       "Locks, dedupe, and replay as the difference between a demo and an operation",
@@ -135,11 +119,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     result:
       "The instructor runs the room from one app instead of juggling a vendor console, a music app, and the light switches. The pilot has a measurement plan, so the decision to open a studio is made on data, not on how cool the hologram looks.",
-    numbers: [
-      { label: "Systems controlled", value: "Video, lights, sound" },
-      { label: "Decision KPI", value: "Rebooking within 14 days" },
-      { label: "Pilot rounds", value: "3" },
-    ],
     lessons: [
       "Reading vendor docs and APIs to find what the product can actually do",
       "Designing for failure in front of a live audience",
@@ -166,11 +145,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     result:
       "Leads arrive with the property details or investment range already filled in. The site shipped in days, not months, because it was built on the same patterns used across our other client systems.",
-    numbers: [
-      { label: "Client track record", value: "$12M+ acquired" },
-      { label: "Average IRR cited", value: "59%" },
-      { label: "Lead paths", value: "Seller and investor" },
-    ],
     lessons: [
       "Shipping a complete, validated lead funnel fast",
       "Server-side validation at the boundary, every time",

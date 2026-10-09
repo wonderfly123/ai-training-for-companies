@@ -205,13 +205,6 @@ deck.forEach((slide, idx) => {
       y += 1.55;
       label(s, "Result", M, y, colW);
       text(s, study.result, { x: M, y: y + 0.25, w: colW, h: 1.0, fontSize: 11 });
-      y += 1.3;
-      rule(s, M, y, colW, true);
-      study.numbers.slice(0, 3).forEach((st, i) => {
-        const yy = y + 0.08 + i * 0.3;
-        text(s, st.label.toUpperCase(), { x: M, y: yy, w: 1.9, h: 0.26, fontFace: MONO, fontSize: 7, color: C.text2, charSpacing: 1 });
-        text(s, st.value, { x: M + 1.95, y: yy, w: colW - 1.95, h: 0.26, fontSize: 10, bold: true });
-      });
       // right
       label(s, "What was built", rx, BODY_Y, colW);
       numbered(s, study.built.slice(0, 3), rx, BODY_Y + 0.25, colW, 0.62, 10);
