@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f4f1ea;
+  --color-paper-deep: #ebe7dd;
+  --color-ink: #161616;
+  --color-ink-muted: #5c5a54;
+  --color-rule: #d9d4c7;
+  --color-accent: #d5451b;
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv05";
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Faint notebook rule lines. 32px pitch matches the 2rem vertical rhythm. */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 31px,
+    var(--color-rule) 31px 32px
+  );
+}
+
+/* A thin vertical margin line, like the red margin on ruled paper, in ink. */
+.margin-line {
+  position: relative;
+}
+.margin-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.25rem;
+  width: 1px;
+  background: var(--color-rule);
+}
+
+.hairline {
+  border-color: var(--color-rule);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-plus::before {
+  content: "\2212";
+}
+.faq-plus::before {
+  content: "+";
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .slide {
+    break-after: page;
+    page-break-after: always;
+    height: 100vh;
+    min-height: 0;
+  }
+  .slide:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
