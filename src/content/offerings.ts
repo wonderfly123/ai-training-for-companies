@@ -19,7 +19,7 @@ export const offerings: Offering[] = [
     who: "Leadership and the people who run operations",
     outcome:
       "Map your operations, pick the first three systems worth building, and leave with a plan and a working prototype of one.",
-    priceUsd: 7500,
+    priceUsd: 15000,
     includes: [
       "Operations mapping session with your team",
       "Live build of one prototype against your real workflow",
@@ -35,7 +35,7 @@ export const offerings: Offering[] = [
     who: "A team of 4 to 8",
     outcome:
       "Build a working AI system against your real data: LLM APIs, integrations, human handoff, and deployment.",
-    priceUsd: 15000,
+    priceUsd: 7500,
     includes: [
       "Twelve hours of hands-on instruction and building",
       "One working system connected to your real data",
