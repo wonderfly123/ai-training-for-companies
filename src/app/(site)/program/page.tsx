@@ -8,6 +8,8 @@ import { MonoLabel } from "@/components/ui/mono-label";
 import { WeekList } from "@/components/site/week-list";
 import { PricingBlock } from "@/components/site/pricing-block";
 import { ContactCta } from "@/components/site/contact-cta";
+import { JsonLd } from "@/components/site/json-ld";
+import { service } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
   title: "AI Engineer Training Program for Companies, 8-Week Cohort",
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
 export default function ProgramPage() {
   return (
     <>
+      <JsonLd data={service()} />
       <section className="ruled border-b border-rule">
         <Container className="py-16 lg:py-24">
           <SectionHeading

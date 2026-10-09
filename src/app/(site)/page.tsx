@@ -9,6 +9,9 @@ import { ProgramSummary } from "@/components/site/program-summary";
 import { AboutBlock } from "@/components/site/about-block";
 import { FaqList } from "@/components/site/faq-list";
 import { ContactCta } from "@/components/site/contact-cta";
+import { JsonLd } from "@/components/site/json-ld";
+import { faqPage } from "@/lib/json-ld";
+import { faq } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | Train your team to build AI in-house` },
@@ -19,6 +22,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqPage(faq)} />
       <Hero />
       <ProofStrip />
       <Problem />
