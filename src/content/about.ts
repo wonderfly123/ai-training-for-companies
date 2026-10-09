@@ -31,14 +31,14 @@ export const about: About = {
   intro:
     "AI Training For Companies is run by consultants who build AI systems for clients and then teach client teams to build the next ones. Every instructor has shipped production systems. None of them teach from slides alone.",
   shortBio: [
-    "AI Training For Companies is a consultancy. Our team has designed, built, and deployed AI and automation systems for clients in events, experiential marketing, real estate, and fitness, and has trained enterprise engineering teams at SnapLogic and Snowflake.",
+    "AI Training For Companies is a consultancy. Our team has designed, built, and deployed AI and automation systems for clients in events, experiential marketing, real estate, fitness, and digital native companies, and has trained enterprise engineering teams through hands-on labs at Snowflake and bootcamps at SnapLogic.",
     "The program exists because the same lesson came up at every client: systems built by outsiders stop improving the day the outsiders leave. The durable fix is a team inside the company that can build and maintain them.",
   ],
   careerShort: [
     { label: "Founder", value: "Jordan Millhausen" },
     { label: "Team", value: "Jordan Millhausen (instruction), Anthony Huni (enterprise sales)" },
-    { label: "Client systems", value: "10 in production across 4 industries" },
-    { label: "Enterprise training", value: "SnapLogic AgentCreator bootcamps" },
+    { label: "Client systems", value: "10 in production across 5 industries" },
+    { label: "Enterprise training", value: "Snowflake hands-on labs, SnapLogic AgentCreator bootcamps" },
   ],
 };
 
@@ -49,8 +49,8 @@ export const people: Person[] = [
     title: "Founder and lead instructor",
     lede: "Designed and shipped every client system shown on this site, and leads the program.",
     bio: [
-      "Jordan Millhausen is a Solutions Engineer at Snowflake, where he works with enterprise engineering teams on data and AI architecture. Before that he was an Enterprise Sales Engineer at SnapLogic, where he led the AgentCreator bootcamps that taught customer teams to build their own AI agents and built the company's first GTM sales agent.",
-      "As a consultant he has designed and deployed AI and operations systems for clients including Wonderfly, Windansea Coconuts, Applegate Ventures, and Hologram Pilates: a customer service text agent with human handoff, an event operations app with a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, a hologram control application, and a lead-routing website. All of them are in production.",
+      "Jordan Millhausen is a Solutions Engineer at Snowflake, where he works with enterprise engineering teams on data and AI architecture and leads hands-on labs. Before that he was an Enterprise Sales Engineer at SnapLogic, where he led the AgentCreator bootcamps that taught customer teams to build their own AI agents and built the company's first GTM sales agent.",
+      "As a consultant he has designed and deployed AI and operations systems for clients including SnapLogic, Nekter, Wonderfly, Windansea Coconuts, Applegate Ventures, and Hologram Pilates: a GTM sales agent, a customer success platform that surfaces churn risk, a customer service text agent with human handoff, an event operations app with a daily document-writing pipeline, a CRM lead pipeline that replaced Zapier, and a hologram control application. All of them are in production.",
       "He holds a B.S. in Mechanical Engineering from the University of Maryland.",
     ],
     career: [
@@ -58,7 +58,10 @@ export const people: Person[] = [
         when: "2026 to now",
         org: "Snowflake",
         role: "Solutions Engineer",
-        notes: ["Data and AI architecture with enterprise engineering teams"],
+        notes: [
+          "Data and AI architecture with enterprise engineering teams",
+          "Leads hands-on labs for customer teams",
+        ],
       },
       {
         when: "2024 to 2026",
@@ -75,6 +78,8 @@ export const people: Person[] = [
         org: "Client work",
         role: "AI and operations systems consultant",
         notes: [
+          "SnapLogic: the company's first GTM sales agent, built on AgentCreator",
+          "Nekter: customer success platform with health scores, alerts, and an AI assistant",
           "Wonderfly: customer service SMS agent, operations systems, content engine",
           "Windansea Coconuts: event and wholesale operations app, daily Run of Show pipeline",
           "Applegate Ventures: lead pipeline, monitoring dashboard, investor onboarding, and website",

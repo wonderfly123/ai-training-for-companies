@@ -70,7 +70,7 @@ export const deck: Slide[] = [
       {
         org: "Snowflake",
         role: "Solutions engineering",
-        note: "Data and AI architecture with enterprise engineering teams",
+        note: "Data and AI architecture with enterprise engineering teams. Leads hands-on labs",
       },
       {
         org: "SnapLogic",
@@ -80,7 +80,7 @@ export const deck: Slide[] = [
       {
         org: "Client work",
         role: "Ten systems in production",
-        note: "Wonderfly, Windansea Coconuts, Applegate Ventures, Hologram Pilates",
+        note: "SnapLogic, Nekter, Wonderfly, Windansea Coconuts, Applegate Ventures, Hologram Pilates",
       },
     ],
   },
@@ -106,7 +106,7 @@ export const deck: Slide[] = [
         role: "Solutions engineering, 2026 to present",
         proof: [
           "Data and AI architecture with enterprise engineering teams",
-          "Sees what works and what stalls across dozens of companies",
+          "Leads hands-on labs for customer teams",
         ],
       },
     ],

@@ -36,6 +36,20 @@ export const pitch = {
   proofHeading: "Built for clients, running today",
   cases: [
     {
+      company: "SnapLogic",
+      title: "The company's first GTM sales agent",
+      problem: "Reps prepped for calls by pulling account history from separate systems. Prep took longer than the call.",
+      built: "An agent on SnapLogic AgentCreator that pulls account context and answers reps' questions on demand.",
+      result: "Account briefs in seconds. The build became the teaching example for customer bootcamps.",
+    },
+    {
+      company: "Nekter",
+      title: "A customer success platform that surfaces churn risk early",
+      problem: "CSMs juggled Salesforce, Zendesk, call recordings, and email. Health drops were noticed after the renewal was lost.",
+      built: "One account view with health scores, AI insights on every interaction, Slack alerts, and a natural-language assistant over the data.",
+      result: "Risk reaches Slack before the renewal call. A CSM asks a question in plain English and gets the answer from the actual call.",
+    },
+    {
       company: "Wonderfly",
       title: "A customer service agent that answers texts around the clock",
       problem: "Customers text evenings and weekends. Staff replied Monday. Bookings were lost.",

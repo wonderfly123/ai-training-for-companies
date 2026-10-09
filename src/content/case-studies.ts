@@ -13,10 +13,64 @@ export interface CaseStudy {
   built: string[];
   result: string;
   lessons: string[];
-  screenshot: { label: string; src?: string };
+  screenshot: { label: string; src?: string; video?: string };
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "nekter",
+    company: "Nekter",
+    role: "Client project",
+    title: "A customer success platform that surfaces churn risk before the renewal call",
+    summary:
+      "Nekter is a customer success platform for SaaS teams. Account data lived in Salesforce, Zendesk, call recordings, and email, and churn signals were missed until a renewal was already lost.",
+    problem:
+      "Customer success managers juggled five systems to understand one account. Nobody saw a health drop until the customer said so. Expansion signals in call transcripts went unread.",
+    built: [
+      "A unified account view synced from Salesforce, Zendesk, and Chorus call recordings, with ARR, renewal dates, and CSM assignment in one place.",
+      "Account health scores with history, so a drop from Healthy to At Risk is visible the day it happens.",
+      "AI-generated interaction insights on every call, email, and ticket: sentiment, churn risk, and expansion signals.",
+      "Proactive Slack and email alerts on health drops, negative interactions, and expansion opportunities.",
+      "Barry, a natural-language assistant that turns a question into structured filters with Claude, searches transcripts, emails, and tickets, and streams back an answer with sources.",
+    ],
+    result:
+      "A CSM asks a question in plain English and gets the answer from the actual call. Health drops reach Slack before the renewal call, not after. The team works from one screen instead of five.",
+    lessons: [
+      "Syncing several SaaS systems into one schema without losing provenance",
+      "Two-phase LLM retrieval: extract filters first, then analyze what the query returns",
+      "Scoring and alerting so people see risk early without watching dashboards",
+      "Streaming answers with sources so users can check the AI's work",
+    ],
+    screenshot: {
+      label: "Nekter dashboard, account health and Barry assistant",
+      video: "/videos/nekter-demo.mp4",
+    },
+  },
+  {
+    slug: "snaplogic",
+    company: "SnapLogic",
+    role: "Client project",
+    title: "The company's first GTM sales agent",
+    summary:
+      "SnapLogic sells an integration and agent platform to enterprises. Its own go-to-market team was preparing for calls by hand while selling customers on automation.",
+    problem:
+      "Before every call, reps and sales engineers pulled account history, open tickets, and product context from separate systems. Prep took longer than the call. The platform could do this work, but nobody had built it for the sales team.",
+    built: [
+      "The company's first GTM sales agent, built on SnapLogic AgentCreator against the systems the sales team already used.",
+      "Account briefs on demand: the agent pulls context from connected systems and answers a rep's questions before and during a call.",
+      "The build became the reference example for the AgentCreator bootcamps, where customer teams learned to build their own agents the same way.",
+    ],
+    result:
+      "Reps get an account brief in seconds instead of an hour of tab-hopping. The agent doubled as the teaching example that showed customers what their own teams could build.",
+    lessons: [
+      "Building an agent on the platform a company already pays for",
+      "Designing for the people who will use it daily, not for the demo",
+      "Turning one internal build into a teaching example for other teams",
+    ],
+    screenshot: {
+      label: "SnapLogic GTM sales agent in AgentCreator",
+    },
+  },
   {
     slug: "wonderfly",
     company: "Wonderfly",

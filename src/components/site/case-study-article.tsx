@@ -33,7 +33,7 @@ export function CaseStudyArticle({ study, n }: CaseStudyArticleProps) {
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted">{study.summary}</p>
 
         <div className="mt-12 max-w-4xl">
-          <Figure label={study.screenshot.label} src={study.screenshot.src} caption={study.screenshot.label} aspect="aspect-[16/10]" />
+          <Figure label={study.screenshot.label} src={study.screenshot.src} video={study.screenshot.video} caption={study.screenshot.label} aspect={study.screenshot.video ? "aspect-[2/1]" : "aspect-[16/10]"} />
         </div>
 
         <div className="mt-12">

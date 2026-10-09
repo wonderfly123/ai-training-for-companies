@@ -30,17 +30,17 @@ export const program: Program = {
     {
       n: "01",
       title: "Pick the system",
-      body: "We map your operations and choose one workflow where people retype, wait, or guess. Small enough to ship, real enough to matter.",
+      body: "We map your operations and choose one workflow where people retype, wait, or guess.",
     },
     {
       n: "02",
       title: "Your team builds it",
-      body: "Four to eight of your people write the code, wire the integrations, and make the decisions. We teach, review, and keep it on the rails.",
+      body: "Your people write the code and wire the integrations. We teach, review, and keep it on the rails.",
     },
     {
       n: "03",
       title: "Your team owns it",
-      body: "It ships to production with monitoring, human handoff, and a runbook. The people who built it keep building. No retainer, no vendor.",
+      body: "It ships with monitoring, handoff, and a runbook. The people who built it keep building."
     },
   ],
   deliverable:

@@ -147,7 +147,7 @@ function light(section: string, title: string) {
   text(s, caseStudies.map((c) => c.company).join("   ·   "), { x: M, y: 3.85, w: CW, h: 0.4, fontSize: 14, bold: true });
 }
 
-// 7 to 9. Cases
+// 7 to 10. Cases
 pitch.cases.forEach((c, i) => {
   const s = light(`Case ${i + 1}`, c.title);
   label(s, c.company, M, 0.3, CW);
@@ -181,4 +181,4 @@ pitch.cases.forEach((c, i) => {
 
 await pres.writeFile({ fileName: OUT });
 await applyTheme(OUT, THEME);
-console.log(`wrote ${OUT} (10 slides)`);
+console.log(`wrote ${OUT} (${7 + pitch.cases.length} slides)`);

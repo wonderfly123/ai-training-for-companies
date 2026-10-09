@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { program } from "@/content/program";
-import { offerings } from "@/content/offerings";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { NumberedList } from "@/components/ui/numbered-list";

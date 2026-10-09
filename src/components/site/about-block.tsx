@@ -1,4 +1,3 @@
-import { site } from "@/content/site";
 import { about } from "@/content/about";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";

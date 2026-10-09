@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 interface FigureProps {
-  /** Kept for call-site compatibility. Not rendered. */
-  n?: number | string;
   /** What the screenshot shows. Rendered inside the placeholder until `src` exists. */
   label: string;
   src?: string;
+  /** MP4 path. Autoplays muted and loops. Takes precedence over src. */
+  video?: string;
   caption?: string;
   /** Tailwind aspect class. Defaults to a 4:3 frame. */
   aspect?: string;
@@ -18,9 +18,9 @@ interface FigureProps {
  * Without it, a labeled dashed frame says exactly which screen to drop in.
  */
 export function Figure({
-  n,
   label,
   src,
+  video,
   caption,
   aspect = "aspect-[4/3]",
   className = "",
@@ -31,7 +31,17 @@ export function Figure({
       <div
         className={`relative w-full overflow-hidden border border-rule bg-paper-deep ${aspect}`}
       >
-        {src ? (
+        {video ? (
+          <video
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label={label}
+            className="absolute inset-0 h-full w-full object-cover object-top"
+          />
+        ) : src ? (
           <Image
             src={src}
             alt={label}
