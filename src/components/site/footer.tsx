@@ -39,7 +39,6 @@ export function Footer() {
               ["/program", "Program"],
               ["/work", "Work"],
               ["/people", "People"],
-              ["/deck", "Deck"],
               ["/contact", "Contact"],
             ].map(([href, label]) => (
               <li key={href}>

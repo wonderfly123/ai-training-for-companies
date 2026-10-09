@@ -20,7 +20,7 @@ export function Hero() {
               production. We teach, review, and support it after.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/deck">View the deck</Button>
+              <Button href="/program">See the program</Button>
               <Button href="/contact" variant="ghost">
                 Contact us
               </Button>

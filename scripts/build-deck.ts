@@ -126,8 +126,9 @@ deck.forEach((slide, idx) => {
     case "title": {
       pres.addSection({ title: "Intro" });
       const s = pres.addSlide({ masterName: "DARK", sectionTitle: "Intro" });
-      text(s, site.tagline, { x: M, y: 1.3, w: 7.5, h: 1.6, fontSize: 40, bold: true, color: THEME.colors.lt1, valign: "top" });
-      text(s, site.description, { x: M, y: 3.05, w: 6.6, h: 1.2, fontSize: 14, color: THEME.colors.accent5 });
+      s.addImage({ path: path.resolve("public/images/hero-windansea-ldx3.jpg"), x: 6.4, y: 0, w: 3.6, h: H - 0.65, sizing: { type: "cover", w: 3.6, h: H - 0.65 } });
+      text(s, site.tagline, { x: M, y: 1.3, w: 5.5, h: 1.8, fontSize: 36, bold: true, color: THEME.colors.lt1, valign: "top" });
+      text(s, site.description, { x: M, y: 3.2, w: 5.5, h: 1.2, fontSize: 13, color: THEME.colors.accent5 });
       text(s, `${site.founder.name}, ${site.founder.title}`, { x: M, y: 4.45, w: 5, h: 0.3, fontFace: MONO, fontSize: 9, color: THEME.colors.accent4 });
       s.addNotes("Title slide. Read cold, no presenter.");
       break;
