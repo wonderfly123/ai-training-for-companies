@@ -33,10 +33,10 @@ export function Hero() {
           </p>
         </div>
         <Figure
-          n={1}
-          label="Wonderfly SMS agent dashboard, conversation view with handoff flag"
-          caption="A customer service agent built for an event venue client, answering texts around the clock."
-          aspect="aspect-[4/3] lg:aspect-[5/4]"
+          label="Windansea Coconuts activation at LDX3 New York"
+          src="/images/hero-windansea-ldx3.jpg"
+          caption="Windansea Coconuts at LDX3 New York. Event intake, run of show, and crew logistics for this activation ran on a system we built."
+          aspect="aspect-[4/5]"
           priority
         />
       </Container>
