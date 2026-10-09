@@ -51,7 +51,7 @@ export const offerings: Offering[] = [
     who: "A team of 4 to 8",
     outcome:
       "One system shipped to production inside your company, owned and understood by the people who built it.",
-    priceUsd: 40000,
+    priceUsd: 50000,
     includes: [
       "Eight weeks of instruction and working sessions",
       "Code and architecture review on your real project",

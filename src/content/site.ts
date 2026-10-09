@@ -46,7 +46,7 @@ export const site: SiteConfig = {
     calendar: "PLACEHOLDER",
   },
   pricing: {
-    cohortUsd: 40000,
+    cohortUsd: 50000,
     cohortSize: "4 to 8 people",
     weeks: 8,
   },
