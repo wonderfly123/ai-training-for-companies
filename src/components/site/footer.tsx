@@ -36,7 +36,7 @@ export function Footer() {
           <MonoLabel>Pages</MonoLabel>
           <ul className="mt-3 space-y-1.5 text-sm">
             {[
-              ["/program", "Program"],
+              ["/offerings", "Offerings"],
               ["/work", "Work"],
               ["/people", "People"],
               ["/contact", "Contact"],

@@ -5,7 +5,7 @@ import { ProofStrip } from "@/components/site/proof-strip";
 import { Problem } from "@/components/site/problem";
 import { HowItWorks } from "@/components/site/how-it-works";
 import { CaseStudyGrid } from "@/components/site/case-study-grid";
-import { ProgramSummary } from "@/components/site/program-summary";
+import { OfferingsSummary } from "@/components/site/offerings-summary";
 import { AboutBlock } from "@/components/site/about-block";
 import { FaqList } from "@/components/site/faq-list";
 import { ContactCta } from "@/components/site/contact-cta";
@@ -28,7 +28,7 @@ export default function HomePage() {
       <Problem />
       <HowItWorks />
       <CaseStudyGrid />
-      <ProgramSummary />
+      <OfferingsSummary />
       <AboutBlock />
       <FaqList />
       <ContactCta />

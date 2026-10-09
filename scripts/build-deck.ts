@@ -5,7 +5,7 @@
 import { createRequire } from "node:module";
 import path from "node:path";
 import { site } from "../src/content/site.ts";
-import { program } from "../src/content/program.ts";
+import { offerings, formatUsd } from "../src/content/offerings.ts";
 import { metrics } from "../src/content/metrics.ts";
 import { caseStudies } from "../src/content/case-studies.ts";
 import { pitch } from "../src/content/pitch.ts";
@@ -94,7 +94,7 @@ function light(section: string, title: string) {
   const s = pres.addSlide({ masterName: "DARK", sectionTitle: "Open" });
   s.addImage({ path: path.resolve("public/images/hero-windansea-ldx3.jpg"), x: 6.2, y: 0, w: 3.8, h: H, sizing: { type: "cover", w: 3.8, h: H } });
   text(s, site.tagline, { x: M, y: 1.5, w: 5.2, h: 2.0, fontSize: 36, bold: true, color: PAPER });
-  text(s, `${site.pricing.weeks} weeks. ${site.pricing.cohortSize}. One system in production.`, { x: M, y: 3.6, w: 5.2, h: 0.5, fontFace: MONO, fontSize: 11, color: "B5B5B5" });
+  text(s, "One day at your office. Three days over Zoom. Eight weeks to production.", { x: M, y: 3.6, w: 5.2, h: 0.5, fontFace: MONO, fontSize: 11, color: "B5B5B5" });
 }
 
 // 2. Problem
@@ -111,17 +111,19 @@ function light(section: string, title: string) {
   lines(s, pitch.fix, M, 1.75, CW, 0.85, 16);
 }
 
-// 4. Program
+// 4. Offerings
 {
-  const s = light("Program", pitch.programHeading);
-  text(s, pitch.programSub, { x: M, y: 1.4, w: CW, h: 0.4, fontSize: 14, color: C.text2 });
-  const gap = 0.15, cw = (CW - 3 * gap) / 4, ch = 1.15;
-  program.weeks.forEach((w, i) => {
-    const x = M + (i % 4) * (cw + gap);
-    const y = 2.05 + Math.floor(i / 4) * (ch + gap);
+  const s = light("Offerings", pitch.offeringsHeading);
+  text(s, pitch.offeringsSub, { x: M, y: 1.4, w: CW, h: 0.4, fontSize: 14, color: C.text2 });
+  const gap = 0.2, cw = (CW - 2 * gap) / 3, y = 2.0, ch = 2.9;
+  offerings.forEach((o, i) => {
+    const x = M + i * (cw + gap);
     s.addShape(pres.ShapeType.rect, { x, y, w: cw, h: ch, fill: { color: TINT }, line: { color: TINT, width: 0 } });
-    text(s, `WEEK ${String(w.n).padStart(2, "0")}`, { x: x + 0.18, y: y + 0.18, w: cw - 0.36, h: 0.22, fontFace: MONO, fontSize: 8, color: C.text2 });
-    text(s, w.title, { x: x + 0.18, y: y + 0.48, w: cw - 0.36, h: 0.55, fontSize: 13, bold: true });
+    text(s, o.duration.toUpperCase(), { x: x + 0.25, y: y + 0.25, w: cw - 0.5, h: 0.22, fontFace: MONO, fontSize: 8, color: C.text2, charSpacing: 1 });
+    text(s, o.name, { x: x + 0.25, y: y + 0.55, w: cw - 0.5, h: 0.4, fontSize: 16, bold: true });
+    text(s, o.format, { x: x + 0.25, y: y + 0.95, w: cw - 0.5, h: 0.3, fontFace: MONO, fontSize: 9, color: C.text2 });
+    text(s, o.outcome, { x: x + 0.25, y: y + 1.35, w: cw - 0.5, h: 1.1, fontSize: 11 });
+    text(s, formatUsd(o.priceUsd), { x: x + 0.25, y: y + ch - 0.55, w: cw - 0.5, h: 0.4, fontFace: MONO, fontSize: 18 });
   });
 }
 
@@ -163,12 +165,13 @@ pitch.cases.forEach((c, i) => {
 {
   pres.addSection({ title: "Close" });
   const s = pres.addSlide({ masterName: "DARK", sectionTitle: "Close" });
-  const price = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(site.pricing.cohortUsd);
   text(s, pitch.priceHeading, { x: M, y: 0.6, w: CW, h: 0.6, fontSize: 22, bold: true, color: PAPER });
-  text(s, price, { x: M, y: 1.4, w: 4, h: 0.9, fontFace: MONO, fontSize: 44, color: PAPER });
-  text(s, `${site.pricing.weeks} weeks · ${site.pricing.cohortSize}`, { x: M, y: 2.35, w: 4, h: 0.3, fontFace: MONO, fontSize: 10, color: "B5B5B5" });
-  pitch.includes.forEach((it, i) => {
-    text(s, it, { x: 5.0, y: 1.45 + i * 0.42, w: 4.4, h: 0.4, fontSize: 13, color: PAPER, bullet: { code: "25AA" } });
+  const cw = (CW - 2 * 0.2) / 3;
+  offerings.forEach((o, i) => {
+    const x = M + i * (cw + 0.2);
+    text(s, o.name, { x, y: 1.4, w: cw, h: 0.35, fontSize: 13, bold: true, color: PAPER });
+    text(s, `${o.duration} · ${o.format}`, { x, y: 1.75, w: cw, h: 0.45, fontFace: MONO, fontSize: 8, color: "B5B5B5" });
+    text(s, formatUsd(o.priceUsd), { x, y: 2.3, w: cw, h: 0.6, fontFace: MONO, fontSize: 28, color: PAPER });
   });
   s.addShape(pres.ShapeType.line, { x: M, y: 3.3, w: CW, h: 0, line: { color: MUTED, width: 0.75 } });
   text(s, pitch.next, { x: M, y: 3.5, w: 5.6, h: 0.8, fontSize: 16, color: PAPER });

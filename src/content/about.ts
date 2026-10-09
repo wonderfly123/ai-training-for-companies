@@ -97,7 +97,7 @@ export const people: Person[] = [
     slug: "anthony-huni",
     name: "Anthony Huni",
     title: "Enterprise sales",
-    lede: "Runs the commercial side: scoping, proposals, and the client relationship through the cohort.",
+    lede: "Runs the commercial side: scoping, proposals, and the client relationship through the engagement.",
     bio: [
       "Anthony Huni leads enterprise sales for AI Training For Companies. He scopes each engagement, writes the proposal, and stays the client's point of contact from the first call through the final week.",
       "PLACEHOLDER: Anthony's background before this, one or two sentences.",

@@ -30,12 +30,12 @@ export default function OpenGraphImage() {
             {site.tagline}
           </div>
           <div style={{ marginTop: 28, fontSize: 30, color: "#595959", maxWidth: 900, lineHeight: 1.3 }}>
-            An eight-week program that trains a small team inside your company to build, deploy, and own AI systems.
+            A one-day workshop, a three-day intensive, or an eight-week cohort. Your team builds AI systems in-house.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#595959" }}>
           <span>{site.url.replace("https://", "")}</span>
-          <span>Eight weeks. One system in production.</span>
+          <span>Workshop · Intensive · Cohort</span>
         </div>
       </div>
     ),

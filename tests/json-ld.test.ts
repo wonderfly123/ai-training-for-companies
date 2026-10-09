@@ -30,7 +30,8 @@ describe("json-ld", () => {
     const j = service();
     expect(j["@type"]).toBe("Service");
     expect(j.provider["@type"]).toBe("Organization");
-    expect(j.offers.price).toBe(String(site.pricing.cohortUsd));
-    expect(j.offers.priceCurrency).toBe("USD");
+    expect(j.offers).toHaveLength(3);
+    expect(j.offers[2].price).toBe(String(site.pricing.cohortUsd));
+    expect(j.offers[0].priceCurrency).toBe("USD");
   });
 });

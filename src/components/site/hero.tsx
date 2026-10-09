@@ -10,17 +10,17 @@ export function Hero() {
       <Container className="grid gap-12 py-16 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:py-24">
         <div className="flex flex-col justify-between gap-10">
           <div>
-            <MonoLabel>The program</MonoLabel>
+            <MonoLabel>AI training for companies</MonoLabel>
             <h1 className="mt-4 max-w-xl font-sans text-4xl font-medium leading-[1.02] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.6rem]">
               {site.tagline}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-              An {site.pricing.weeks}-week, hands-on program for {site.pricing.cohortSize} at
-              your company. They build one real system from your operations and ship it to
-              production. We teach, review, and support it after.
+              A one-day workshop at your office, a three-day Zoom intensive, or an eight-week
+              cohort that ships a real system. Your team builds. We teach, review, and support
+              it after.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/program">See the program</Button>
+              <Button href="/offerings">See the offerings</Button>
               <Button href="/contact" variant="ghost">
                 Contact us
               </Button>

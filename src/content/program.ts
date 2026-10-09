@@ -30,7 +30,7 @@ export const program: Program = {
     {
       n: "01",
       title: "Pick the system",
-      body: "We map your operations and choose one workflow where people retype, wait, or guess. Small enough to ship in eight weeks, real enough to matter.",
+      body: "We map your operations and choose one workflow where people retype, wait, or guess. Small enough to ship, real enough to matter.",
     },
     {
       n: "02",

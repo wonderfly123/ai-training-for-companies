@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 import { Container } from "@/components/ui/container";
 
 const links = [
-  { href: "/program", label: "Program" },
+  { href: "/offerings", label: "Offerings" },
   { href: "/work", label: "Work" },
   { href: "/people", label: "People" },
   { href: "/contact", label: "Contact" },

@@ -11,7 +11,7 @@ export const faq: FaqItem[] = [
   {
     question: "What is AI training for companies?",
     answer:
-      "AI training for companies is a program that teaches a company's own employees to build and run AI systems instead of buying them from a vendor. In this program, a cohort of four to eight people picks one real workflow from their operations and ships a working AI system to production in eight weeks, with instructors who have built the same kind of systems for clients.",
+      "AI training for companies teaches a company's own employees to build and run AI systems instead of buying them from a vendor. We offer three formats: a one-day workshop at your office, a three-day remote intensive, and an eight-week cohort that ships a system to production. Each is hands-on, uses your real workflows, and is taught by consultants who have built the same kind of systems for clients.",
   },
   {
     question: "What is a forward deployed engineer?",
@@ -21,17 +21,17 @@ export const faq: FaqItem[] = [
   {
     question: "How much does AI training for a company cost?",
     answer:
-      "The eight-week cohort for four to eight people is priced as a single fixed fee, listed on the program page. That fee covers the full program, the shipped system, and the runbook. There are no per-seat charges and no software to license. Follow-on advisory after the cohort is quoted per engagement.",
+      "Three fixed fees, listed on the offerings page: a one-day on-site workshop, a three-day remote intensive for a team of four to eight, and an eight-week cohort that ends with a system in production. No per-seat charges and no software to license. Follow-on advisory is quoted per engagement.",
   },
   {
     question: "How long does it take to train an AI engineer?",
     answer:
-      "Eight weeks is enough for a motivated operations or engineering person to ship a production AI system with guidance, which is what this program does. Becoming fully independent takes a second and third project, which is why the program ends with a ranked list of what to build next and the team has the skills to build it.",
+      "A three-day intensive is enough for a team to build a working system against real data with guidance. Eight weeks is enough to ship one to production and own it. Becoming fully independent takes a second and third project, which is why every format ends with a ranked list of what to build next.",
   },
   {
     question: "Do my employees need to be programmers?",
     answer:
-      "No. The best cohorts mix operations people who know where the problems are with one or two people who are comfortable with code or data. Modern AI tooling lets non-programmers go further than they expect, and the program is structured so each person contributes where they are strongest.",
+      "No. The best teams mix operations people who know where the problems are with one or two people who are comfortable with code or data. Modern AI tooling lets non-programmers go further than they expect, and the program is structured so each person contributes where they are strongest.",
   },
   {
     question: "What does the company have at the end of the program?",

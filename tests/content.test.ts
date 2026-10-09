@@ -8,8 +8,9 @@ import { forbiddenWords } from "@/content/forbidden-words";
 import { about, people } from "@/content/about";
 import { metrics } from "@/content/metrics";
 import { pitch } from "@/content/pitch";
+import { offerings } from "@/content/offerings";
 
-const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch }).toLowerCase();
+const allCopy = JSON.stringify({ caseStudies, deck, program, faq, site, about, people, metrics, pitch, offerings }).toLowerCase();
 
 describe("content integrity", () => {
   it("has five case studies with unique slugs", () => {
@@ -58,6 +59,11 @@ describe("content integrity", () => {
     ]) {
       expect(questions, q).toContain(q);
     }
+  });
+
+  it("has three offerings with prices", () => {
+    expect(offerings).toHaveLength(3);
+    for (const o of offerings) expect(o.priceUsd).toBeGreaterThan(0);
   });
 
   it("program has three summary steps", () => {

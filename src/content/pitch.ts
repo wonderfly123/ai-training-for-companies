@@ -23,8 +23,8 @@ export const pitch = {
     "They know the business, so they build the right thing first.",
     "They stay, so the systems get maintained and the next one gets built.",
   ],
-  programHeading: "Eight weeks. One system in production.",
-  programSub: "Your team builds it. We teach, review, and support it after.",
+  offeringsHeading: "Three ways to work with us",
+  offeringsSub: "Your team builds. We teach, review, and support it after.",
   outcomesHeading: "What your team can do after",
   outcomes: [
     "Build on LLM APIs with structured outputs and tool use",
@@ -57,13 +57,7 @@ export const pitch = {
       result: "Zapier is gone. Every lead has an audit trail. Million-dollar transactions run on it.",
     },
   ] satisfies PitchCase[],
-  priceHeading: "One fee. One cohort. One system in production.",
-  includes: [
-    "Eight weeks of instruction and working sessions",
-    "Code and architecture review on your real project",
-    "Deployment, runbook, and monitoring",
-    "Thirty days of support after the cohort",
-  ],
+  priceHeading: "Fixed fees. No per-seat charges.",
   nextHeading: "Next step",
   next: "Tell us the one workflow in your company that wastes the most human time.",
 };

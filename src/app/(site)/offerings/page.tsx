@@ -1,44 +1,51 @@
 import type { Metadata } from "next";
 import { program } from "@/content/program";
-import { site } from "@/content/site";
+import { offerings } from "@/content/offerings";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { NumberedList } from "@/components/ui/numbered-list";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { WeekList } from "@/components/site/week-list";
-import { PricingBlock } from "@/components/site/pricing-block";
+import { OfferingsGrid } from "@/components/site/offerings-grid";
 import { ContactCta } from "@/components/site/contact-cta";
 import { JsonLd } from "@/components/site/json-ld";
 import { service } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
-  title: "AI Engineer Training Program for Companies, 8-Week Cohort",
-  description: `An ${site.pricing.weeks}-week cohort that trains ${site.pricing.cohortSize} inside your company to build and own an AI system. Week-by-week curriculum, outcomes, and pricing.`,
-  alternates: { canonical: "/program" },
+  title: "AI Training Offerings for Companies: Workshop, Intensive, Cohort",
+  description:
+    "Three ways to train your team to build AI: a one-day workshop at your office, a three-day remote intensive, or an eight-week cohort that ships a system to production. Formats, outcomes, and pricing.",
+  alternates: { canonical: "/offerings" },
 };
 
-export default function ProgramPage() {
+export default function OfferingsPage() {
   return (
     <>
       <JsonLd data={service()} />
-      <section className="ruled border-b border-rule">
+      <section className="border-b border-rule">
         <Container className="py-16 lg:py-24">
           <SectionHeading
             as="h1"
-            eyebrow="The program"
-            title={program.name}
-            lede={program.summary}
+            eyebrow="Offerings"
+            title="Three ways to train your team"
+            lede="Pick the format that fits the time you have. Every one is hands-on, uses your real workflows, and ends with something built."
           />
-          <div className="mt-10 max-w-2xl border-l border-ink pl-5">
-            <MonoLabel>Deliverable</MonoLabel>
-            <p className="mt-2 text-lg leading-relaxed text-ink">{program.deliverable}</p>
-          </div>
         </Container>
       </section>
 
       <section className="border-b border-rule">
         <Container className="py-20">
-          <SectionHeading eyebrow="Week by week" title="What happens, and when" />
+          <OfferingsGrid />
+        </Container>
+      </section>
+
+      <section className="border-b border-rule">
+        <Container className="py-20">
+          <SectionHeading
+            eyebrow="The eight-week cohort, week by week"
+            title="What happens, and when"
+            lede={program.summary}
+          />
           <div className="mt-10">
             <WeekList weeks={program.weeks} />
           </div>
@@ -49,19 +56,10 @@ export default function ProgramPage() {
         <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
           <SectionHeading
             eyebrow="Outcomes"
-            title="What your team can do when it ends"
-            lede="Things they could not do in week one and can do unsupervised in week nine."
+            title="What your team can do after"
+            lede="Things they could not do on day one and can do unsupervised after."
           />
           <NumberedList items={program.outcomes} />
-        </Container>
-      </section>
-
-      <section className="border-b border-rule">
-        <Container className="py-20">
-          <SectionHeading eyebrow="Pricing" title="One fee, one cohort, one system in production" />
-          <div className="mt-10">
-            <PricingBlock />
-          </div>
         </Container>
       </section>
 
@@ -70,7 +68,7 @@ export default function ProgramPage() {
           <SectionHeading eyebrow="Fit" title="Who this is for, and who it is not for" />
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <MonoLabel accent>A fit</MonoLabel>
+              <MonoLabel>A fit</MonoLabel>
               <NumberedList items={program.fit} className="mt-3" />
             </div>
             <div>
