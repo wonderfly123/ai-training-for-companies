@@ -1,17 +1,19 @@
 import { Container } from "@/components/ui/container";
 import { MonoLabel } from "@/components/ui/mono-label";
-import { caseStudies } from "@/content/case-studies";
+import { metrics } from "@/content/metrics";
 
-/** Client names, read from the case studies so the list never drifts. */
 export function ProofStrip() {
   return (
-    <section aria-label="Clients" className="border-b border-rule">
-      <Container className="flex flex-wrap items-baseline gap-x-10 gap-y-3 py-6">
-        <MonoLabel>Clients</MonoLabel>
-        {caseStudies.map((c) => (
-          <span key={c.slug} className="font-sans text-base font-medium text-ink">
-            {c.company}
-          </span>
+    <section aria-label="Results" className="border-b border-rule">
+      <Container className="grid grid-cols-2 divide-x divide-rule lg:grid-cols-4">
+        {metrics.map((m, i) => (
+          <div
+            key={m.label}
+            className={`py-8 ${i % 2 === 1 ? "pl-6" : "pr-6"} lg:px-6 lg:first:pl-0 lg:last:pr-0`}
+          >
+            <p className="tabular font-mono text-3xl text-ink sm:text-4xl">{m.value}</p>
+            <MonoLabel className="mt-2 block">{m.label}</MonoLabel>
+          </div>
         ))}
       </Container>
     </section>

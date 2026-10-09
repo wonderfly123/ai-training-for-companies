@@ -1,4 +1,5 @@
 import { site } from "@/content/site";
+import { metrics } from "@/content/metrics";
 import type { Slide as SlideData } from "@/content/deck";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { Figure } from "@/components/ui/figure";
@@ -75,7 +76,15 @@ export function TeacherBody({ slide }: { slide: Extract<"teacher"> }) {
       <div>
         <SlideTitle>{slide.heading}</SlideTitle>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-muted">{slide.body}</p>
-        <dl className="mt-8 border-t border-ink">
+        <div className="mt-8 grid grid-cols-2 gap-px border border-rule bg-rule sm:grid-cols-4">
+          {metrics.map((m) => (
+            <div key={m.label} className="bg-paper p-4">
+              <p className="tabular font-mono text-2xl text-ink">{m.value}</p>
+              <p className="mt-1 font-mono text-[10px] leading-snug text-ink-muted">{m.label}</p>
+            </div>
+          ))}
+        </div>
+        <dl className="mt-6 border-t border-ink">
           {slide.roles.map((r) => (
             <div key={r.org} className="grid gap-1 border-b border-rule py-2.5 sm:grid-cols-[14rem_1fr] sm:gap-4">
               <dt className="font-sans text-sm font-medium text-ink">{r.org}</dt>

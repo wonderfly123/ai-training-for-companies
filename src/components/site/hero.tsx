@@ -27,8 +27,8 @@ export function Hero() {
             </div>
           </div>
           <p className="max-w-md border-l border-ink pl-4 font-mono text-xs leading-relaxed text-ink-muted">
-            Our consultants have built and deployed AI systems for clients in events, consumer
-            products, real estate, and fitness, and trained enterprise engineering teams at
+            Our consultants have built and deployed AI systems for clients in events, experiential
+            marketing, real estate, and fitness, and trained enterprise engineering teams at
             SnapLogic and Snowflake.
           </p>
         </div>

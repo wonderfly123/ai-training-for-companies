@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deck:pptx": "NODE_PATH=./node_modules node --experimental-strip-types scripts/build-deck.ts"
   },
   "dependencies": {
     "next": "16.2.1",

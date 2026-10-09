@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Client project",
     title: "Operations that run without anyone retyping anything",
     summary:
-      "Windansea Coconuts sells branded coconuts to resorts, weddings, and corporate events. Two owners, no full-time staff, and roughly $400K of revenue each of the last two summers.",
+      "Windansea Coconuts is an experiential marketing company that runs branded activations for some of the largest brands in the world. Two owners, seasonal crews, and more than $1M in revenue.",
     problem:
       "Every closed deal meant copying details from the CRM into a task tracker, emailing the client an intake form, chasing the answers, and then typing them again into a run sheet for the crew. Wholesale invoices lived in a separate system nobody checked. Mistakes showed up on event day.",
     built: [
@@ -71,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
     result:
       "A closed deal becomes a tracked event with a completed intake form and a current run sheet without anyone retyping it. Failures email the owner with the payload, so nothing fails silently.",
     numbers: [
-      { label: "Summer revenue", value: "~$400K, two years running" },
+      { label: "Revenue", value: "$1M+" },
       { label: "Systems connected", value: "4" },
       { label: "Run of Show", value: "Written daily by Claude" },
     ],
