@@ -14,6 +14,7 @@ export interface Person {
   career: CareerEntry[];
   linkedin: string;
   headshotLabel: string;
+  headshot?: string;
 }
 
 export interface About {
@@ -35,7 +36,7 @@ export const about: About = {
   ],
   careerShort: [
     { label: "Founder", value: "Jordan Millhausen" },
-    { label: "Team", value: "Jordan Millhausen, Anthony Huni" },
+    { label: "Team", value: "Jordan Millhausen (instruction), Anthony Huni (enterprise sales)" },
     { label: "Client systems", value: "5 in production across 4 industries" },
     { label: "Enterprise training", value: "SnapLogic AgentCreator bootcamps" },
   ],
@@ -90,17 +91,27 @@ export const people: Person[] = [
     ],
     linkedin: "https://www.linkedin.com/in/jordan-millhausen",
     headshotLabel: "Jordan Millhausen, headshot",
+    headshot: "/images/jordan-millhausen.jpg",
   },
   {
     slug: "anthony-huni",
     name: "Anthony Huni",
-    title: "PLACEHOLDER title",
-    lede: "PLACEHOLDER: one line on Anthony's role in the program.",
-    bio: ["PLACEHOLDER: Anthony's background, what he has built or run, and what he does in the program."],
+    title: "Enterprise sales",
+    lede: "Runs the commercial side: scoping, proposals, and the client relationship through the cohort.",
+    bio: [
+      "Anthony Huni leads enterprise sales for AI Training For Companies. He scopes each engagement, writes the proposal, and stays the client's point of contact from the first call through the final week.",
+      "PLACEHOLDER: Anthony's background before this, one or two sentences.",
+    ],
     career: [
       {
+        when: "Now",
+        org: "AI Training For Companies",
+        role: "Enterprise sales",
+        notes: ["Scoping, proposals, and client relationships"],
+      },
+      {
         when: "PLACEHOLDER",
-        org: "PLACEHOLDER organization",
+        org: "PLACEHOLDER prior organization",
         role: "PLACEHOLDER role",
         notes: ["PLACEHOLDER: one line of proof"],
       },

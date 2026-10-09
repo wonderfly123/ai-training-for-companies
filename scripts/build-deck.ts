@@ -79,7 +79,7 @@ pres.defineSlideMaster({
   title: "CONTENT",
   background: { color: THEME.colors.lt1 },
   objects: [
-    { placeholder: { options: { name: "title", type: "title", x: M, y: TITLE_Y, w: CW, h: 0.85, fontSize: 26, bold: true, color: THEME.colors.dk1, margin: 0, valign: "top" }, text: "" } },
+    { placeholder: { options: { name: "title", type: "title", x: M, y: TITLE_Y, w: CW - 1.3, h: 0.85, fontSize: 26, bold: true, color: THEME.colors.dk1, margin: 0, valign: "top" }, text: "" } },
     { text: { text: site.contact.email, options: { x: M, y: H - 0.5, w: 4, h: 0.25, fontFace: MONO, fontSize: 9, color: THEME.colors.dk2, margin: 0 } } },
     { text: { text: footerUrl, options: { x: 4.5, y: H - 0.5, w: 3.4, h: 0.25, fontFace: MONO, fontSize: 9, color: THEME.colors.dk2, align: "center", margin: 0 } } },
   ],
@@ -156,7 +156,8 @@ deck.forEach((slide, idx) => {
     case "teacher": {
       const s = content("Who teaches");
       title(s, slide.heading);
-      text(s, slide.body, { x: M, y: BODY_Y + 0.05, w: CW, h: 0.7, fontSize: 13, color: C.text2 });
+      s.addImage({ path: path.resolve("public" + site.founder.headshot), x: W - M - 1.1, y: 0.4, w: 1.1, h: 1.35, sizing: { type: "cover", w: 1.1, h: 1.35 } });
+      text(s, slide.body, { x: M, y: BODY_Y + 0.05, w: CW - 1.4, h: 0.7, fontSize: 13, color: C.text2 });
       const mw = (CW - 3 * 0.15) / 4;
       metrics.forEach((m, i) => {
         const x = M + i * (mw + 0.15);

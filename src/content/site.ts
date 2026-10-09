@@ -8,6 +8,7 @@ export interface SiteConfig {
     title: string;
     linkedin: string;
     headshotAlt: string;
+    headshot: string;
   };
   contact: {
     email: string;
@@ -37,9 +38,10 @@ export const site: SiteConfig = {
     title: "Founder",
     linkedin: "https://www.linkedin.com/in/jordan-millhausen",
     headshotAlt: "Jordan Millhausen",
+    headshot: "/images/jordan-millhausen.jpg",
   },
   contact: {
-    email: "jordan@wonderflyathletics.com",
+    email: "millhausenjordan@gmail.com",
     phone: "PLACEHOLDER",
     calendar: "PLACEHOLDER",
   },

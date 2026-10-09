@@ -69,6 +69,7 @@ export function TeacherBody({ slide }: { slide: Extract<"teacher"> }) {
       <div className="flex flex-col gap-6">
         <Figure
           label={`${site.founder.name}, headshot`}
+          src={site.founder.headshot}
           caption={site.founder.name}
           aspect="aspect-[4/5] max-h-[46vh]"
         />

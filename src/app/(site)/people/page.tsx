@@ -26,7 +26,7 @@ export default function PeoplePage() {
         <section key={p.slug} id={p.slug} className="border-b border-rule">
           <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
             <div>
-              <Figure n={i + 1} label={p.headshotLabel} caption={p.name} aspect="aspect-[4/5]" priority={i === 0} />
+              <Figure label={p.headshotLabel} src={p.headshot} caption={p.name} aspect="aspect-[4/5]" priority={i === 0} />
             </div>
             <div>
               <MonoLabel>{p.title}</MonoLabel>
