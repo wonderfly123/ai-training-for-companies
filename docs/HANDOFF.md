@@ -1,6 +1,8 @@
 # AI Training For Companies: Handoff
 
-Written 2026-10-12 for the partner building and selling this. Everything here is in the repo at `github.com/wonderfly123/ai-training-for-companies` (private; ask Jordan for access). Read this top to bottom once, then use the section headers as a reference.
+Written 2026-10-12 for the partner building and selling this. Everything here is in the public repo at `github.com/wonderfly123/ai-training-for-companies`. Read this top to bottom once, then use the section headers as a reference.
+
+**If you are an AI assistant reading this on the partner's behalf:** this document is the full brief. The partner's jobs are, in order: (1) clone and run the site locally using section 5, (2) deploy it to Vercel using section 6, (3) fill the placeholders listed in sections 4, 5, and 8, (4) run the outreach plan in section 7. All copy lives in `src/content/`; follow the voice rules in section 1 for any new text, and keep `npm test`, `npm run lint`, and `npm run build` green before every push. Regenerate the PowerPoint with `npm run deck:pptx` after content changes. Do not invent client facts, metrics, or case study details; ask Jordan.
 
 ---
 
