@@ -7,9 +7,9 @@ export function HowItWorks() {
     <section className="border-b border-rule bg-paper-deep">
       <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1fr] lg:gap-20">
         <SectionHeading
-          eyebrow="The approach"
-          title="Your people build the systems. We make sure they can."
-          lede="Companies that own their AI systems have a small team inside that builds and maintains them. The on-site workshop and intensive train that team on a real workflow from your operations."
+          eyebrow="How it works"
+          title="Pick a workflow. Build it together. Your team keeps it."
+          lede="Hands-on, on a workflow from your own operations."
         />
         <ol className="self-center">
           {program.steps.map((s) => (

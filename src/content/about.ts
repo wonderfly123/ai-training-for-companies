@@ -47,7 +47,7 @@ export const people: Person[] = [
     slug: "jordan-millhausen",
     name: "Jordan Millhausen",
     title: "Founder and lead instructor",
-    lede: "Designed and shipped every client system shown on this site, and leads the program.",
+    lede: "Solutions Engineer at Snowflake, helping some of the world's most advanced companies understand and implement AI. Before that, led the AgentCreator bootcamps at SnapLogic. Designed and shipped every client system on this site.",
     bio: [
       "Jordan Millhausen is a Solutions Engineer at Snowflake, where he works with big data at Snowflake, helping some of the world's most advanced companies understand and implement AI, and leads hands-on labs for customer teams. Before that he was an Enterprise Sales Engineer at SnapLogic, where he led the AgentCreator bootcamps that taught customer teams to build their own AI agents and built the company's first GTM sales agent.",
       "As a consultant he has designed and deployed AI and operations systems for clients including SnapLogic, Nekter, Wonderfly, Windansea Coconuts, and Applegate Ventures: a GTM sales agent, a customer success platform that surfaces churn risk, a customer service text agent with human handoff, an event operations app with a daily document-writing pipeline, and a CRM lead pipeline that replaced Zapier. All of them are in production.",

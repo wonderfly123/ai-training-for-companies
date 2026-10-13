@@ -52,9 +52,9 @@ export const caseStudies: CaseStudy[] = [
     role: "Internal build",
     title: "GTM sales assistant",
     summary:
-      "SnapLogic sells an integration and agent platform to enterprises. Its own go-to-market team was preparing for calls by hand while selling customers on automation.",
+      "SnapLogic sells an integration and agent platform to enterprises. We built an AI assistant on that platform for SnapLogic's own go-to-market team, so reps walk into every call prepared.",
     problem:
-      "Before every call, reps and sales engineers pulled account history, open tickets, and product context from separate systems. Prep took longer than the call. The platform could do this work, but nobody had built it for the sales team.",
+      "Before every call, reps and sales engineers gathered account history, open tickets, and product context from several systems. AgentCreator was a natural fit to bring all of it into one place, on the same platform the team sells.",
     built: [
       "The company's first GTM sales assistant, built on SnapLogic AgentCreator against the systems the sales team already used.",
       "Account briefs on demand: the agent pulls context from connected systems and answers a rep's questions before and during a call.",
