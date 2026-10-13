@@ -5,7 +5,7 @@ import { OfferingsGrid } from "./offerings-grid";
 
 export function OfferingsSummary() {
   return (
-    <section className="border-b border-rule">
+    <section className="border-b border-rule bg-paper-deep">
       <Container className="py-20">
         <SectionHeading
           eyebrow="Offerings"
