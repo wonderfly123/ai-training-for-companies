@@ -38,11 +38,6 @@ describe("content integrity", () => {
     }
   });
 
-  it("program has eight weeks in order", () => {
-    expect(program.weeks).toHaveLength(8);
-    program.weeks.forEach((w, i) => expect(w.n).toBe(i + 1));
-  });
-
   it("faq has at least six items with real answers", () => {
     expect(faq.length).toBeGreaterThanOrEqual(6);
     for (const f of faq) {
@@ -64,6 +59,8 @@ describe("content integrity", () => {
 
   it("has three offerings with prices", () => {
     expect(offerings).toHaveLength(3);
+    expect(offerings.map((o) => o.priceUsd)).toEqual([7500, 15000, 25000]);
+    expect(new Set(offerings.map((o) => o.who)).size).toBe(3);
     for (const o of offerings) {
       expect(o.priceUsd).toBeGreaterThan(0);
       expect(o.agenda.length, o.slug).toBeGreaterThanOrEqual(3);

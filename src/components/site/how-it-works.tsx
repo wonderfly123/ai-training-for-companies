@@ -9,7 +9,7 @@ export function HowItWorks() {
         <SectionHeading
           eyebrow="The approach"
           title="Your people build the systems. We make sure they can."
-          lede="Companies that own their AI systems have a small team inside that builds and maintains them. Every format we offer trains that team on a real workflow from your operations."
+          lede="Companies that own their AI systems have a small team inside that builds and maintains them. The on-site workshop and intensive train that team on a real workflow from your operations."
         />
         <ol className="self-center">
           {program.steps.map((s) => (

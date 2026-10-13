@@ -30,12 +30,12 @@ export default function OpenGraphImage() {
             {site.tagline}
           </div>
           <div style={{ marginTop: 28, fontSize: 30, color: "#595959", maxWidth: 900, lineHeight: 1.3 }}>
-            A one-day workshop, a three-day intensive, or an eight-week cohort. Your team builds AI systems in-house.
+            A virtual workshop, an on-site workshop, or a three-day on-site intensive.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#595959" }}>
           <span>{site.url.replace("https://", "")}</span>
-          <span>Workshop · Intensive · Cohort</span>
+          <span>Virtual · On site · Intensive</span>
         </div>
       </div>
     ),

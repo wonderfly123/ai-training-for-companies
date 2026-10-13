@@ -37,7 +37,7 @@ export function CaseStudyGrid({
               </div>
               <p className="mt-4 font-sans text-sm font-semibold">Your company</p>
               <h3 className="mt-1 font-sans text-xl font-medium leading-snug tracking-[-0.01em]">
-                The next one gets built by your team, with me in the room.
+                The next one gets built by your team, with us in the room.
               </h3>
             </div>
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] group-hover:text-accent">

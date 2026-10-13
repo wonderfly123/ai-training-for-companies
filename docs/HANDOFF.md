@@ -10,12 +10,12 @@ Written 2026-10-12 for the partner building and selling this. Everything here is
 
 **AI Training For Companies** is a consultancy that trains a company's own employees to build AI systems and to work with AI the way the best users do. We do not sell software. We do not build and leave. We leave behind a working system and a team that can build the next one.
 
-**One line:** We train your team to build AI systems in-house.
+**One line:** We train your team to work with AI and build AI systems you own.
 
 **Two things we teach, in every format:**
 
 1. **Build.** A small team inside the company builds and owns an AI system on a real workflow from their operations. Think forward deployed engineer, grown in-house.
-2. **Fluency.** Most teams have ChatGPT, Copilot, or Gemini and use them like a search box. The people getting ten times the output run Claude Code and Codex from the terminal, hand multi-step work to agents, and script the repetitive parts. We teach that on each person's real tasks.
+2. **Fluency.** Most teams have ChatGPT, Copilot, or Gemini and use them like a search box. The best users run Claude Code and Codex from the terminal, hand multi-step work to agents, and script the repetitive parts. We teach that on each person's real tasks.
 
 **Why we win:** the instructors have shipped the systems. Every case study below is in production for a real client. Jordan also led AgentCreator bootcamps at SnapLogic and leads hands-on labs at Snowflake, so enterprise training is not new to us.
 
@@ -34,15 +34,13 @@ All three are hands-on, use the client's real workflows, and end with something 
 
 | Offering | Format | Length | For | Price | Ends with |
 |---|---|---|---|---|---|
-| **One-day workshop** | In person, at their office | 1 day | Leadership and the people who run operations | $15,000 | Operations map, a working prototype of one system, ranked list of the next three, written plan within a week |
-| **Three-day intensive** | Remote, Zoom | 3 days, 4 hours per day | Team of 4 to 8 | $7,500 | One working system against their real data, deployed, with a runbook. Each person using Claude Code or Codex on their own work |
-| **Eight-week cohort** | On site or remote | 8 weeks | Team of 4 to 8 | $50,000 | One system in production, owned by their team. Monitoring, handoff, runbook, ranked next three, 30 days of support |
+| **One-day virtual workshop** | Remote, Zoom | 1 day, 6 hours | Any team already using ChatGPT or Copilot that wants more from it | $7,500 | Everyone set up with Claude Code or Codex, one repetitive task per person handed off, a written workflow each person keeps |
+| **One-day on-site workshop** | In person, at their office | 1 day, 8 hours | Leadership and the people who run operations, deciding what to build first | $15,000 | Operations map, a working prototype of one system, ranked list of the next three, written plan within a week |
+| **Three-day on-site intensive** | In person, at their office | 3 days, all day | The 4 to 8 people who will build and run the first system | $25,000 | One working system against their real data, deployed, with a runbook. Each person using Claude Code or Codex on their own work. Two weeks of support |
 
-Full agendas, "what you walk away with," and "before day one" lists are on the site at `/offerings/workshop`, `/offerings/intensive`, `/offerings/cohort`, and in `src/content/offerings.ts`.
+Full agendas, "what you walk away with," and "before day one" lists are on the site at `/offerings/virtual`, `/offerings/workshop`, `/offerings/intensive`, and in `src/content/offerings.ts`.
 
-**Suggested sales motion:** the workshop is the entry offer. It is one day, it is on site, and it produces a ranked list of systems to build. The intensive or cohort is the natural next step to build the first item on that list. Do not lead with the cohort cold.
-
-**Cohort week by week** (also in `src/content/program.ts`): 1 Foundations, 2 Pick the system, 3 Integrations, 4 Agents and tools, 5 Human in the loop, 6 Build week, 7 Evaluate and harden, 8 Deploy and own.
+**Suggested sales motion:** the on-site workshop is the entry offer. It is one day, it is on site, and it produces a ranked list of systems to build. The intensive is the natural next step to build the first item on that list. The virtual workshop is the smaller yes for teams that are spread out or not ready to host us. Do not lead with the intensive cold.
 
 ---
 
@@ -85,7 +83,7 @@ A Next.js 16 app (App Router, React 19, TypeScript, Tailwind 4) with no CMS. All
 | Route | Purpose |
 |---|---|
 | `/` | Hero with Nekter demo video, metrics, problem, approach, AI fluency, case study cards, offerings summary, who we are, FAQ, contact CTA |
-| `/offerings` | Three offerings side by side, cohort week by week, outcomes, fit |
+| `/offerings` | Three offerings side by side, outcomes, fit |
 | `/offerings/[slug]` | Detail page per offering: agenda, what you walk away with, included, before day one |
 | `/work` and `/work/[slug]` | Case study index and one page per project |
 | `/people` | Team |
@@ -99,7 +97,7 @@ SEO and answer-engine work is done: literal page titles, canonical URLs, Open Gr
 src/content/site.ts          name, tagline, description, contact email, LinkedIn
 src/content/offerings.ts     the three offerings, prices, agendas, walk-away lists
 src/content/case-studies.ts  the five projects
-src/content/program.ts       cohort weeks, outcomes, fit / not fit, three-step approach
+src/content/program.ts       outcomes, fit / not fit, three-step approach
 src/content/fluency.ts       the "best AI users work differently" section
 src/content/faq.ts           FAQ
 src/content/metrics.ts       homepage numbers
@@ -158,7 +156,7 @@ Companies with 50 to 500 employees whose operations run on people retyping thing
 Not a fit: companies that want a vendor to build it and walk away, teams that cannot free up time, projects that need a data platform built first, anyone who wants a strategy deck without shipping anything.
 
 ### The entry offer
-Lead with the one-day workshop. It is a small decision ($15,000, one day, at their office), it gets us in the building with the people who run operations, and it ends with a ranked list of systems to build. The intensive or cohort is the follow-on to build the first one.
+Lead with the one-day workshop. It is a small decision ($15,000, one day, at their office), it gets us in the building with the people who run operations, and it ends with a ranked list of systems to build. The intensive is the follow-on to build the first one.
 
 ### Channels, in order of expected yield
 1. **Warm network.** Jordan's contacts from Snowflake and SnapLogic customers, and the owners and operators around the existing clients (venue owners, event and experiential marketing companies, real estate investors). Ask each existing client for two introductions.
@@ -170,14 +168,14 @@ Lead with the one-day workshop. It is a small decision ($15,000, one day, at the
 1. **First touch.** One short email or message. Name the workflow we suspect is wasting their time (every company in these industries has the same three), one sentence on the closest case study, and the ask: a 30-minute call. Attach or link the deck.
 2. **The call.** Ask about the one workflow that wastes the most human time. That is the whole agenda. Qualify on team availability and whether they want the capability in-house.
 3. **One-page proposal** within 48 hours naming the format, the dates, the people who should attend, and the price. No long documents.
-4. **Workshop.** Deliver it. The ranked list of next systems is the proposal for the intensive or cohort.
-5. **Follow-on.** Propose the intensive or cohort to build item one on the list, with the same people in the room.
+4. **Workshop.** Deliver it. The ranked list of next systems is the proposal for the intensive.
+5. **Follow-on.** Propose the intensive to build item one on the list, with the same people in the room.
 
 ### Message, in plain words
 "Your team has AI tools and nothing in the operation has changed. We come to your office for a day, map where people retype, wait, or guess, show your team how the best AI users actually work, and build a working prototype of the first fix with your people at the keyboard. You leave with a plan and a prototype. We have done this for an experiential marketing company, an event venue company, a real estate investor, and a SaaS company, and every one of those systems is still running."
 
 ### Targets for the first 90 days
-Set these together, then track them in a shared sheet: conversations started, calls held, proposals sent, workshops delivered, follow-on engagements. A reasonable first quarter is two workshops delivered and one intensive or cohort sold from them. Price can move once there are three paid references.
+Set these together, then track them in a shared sheet: conversations started, calls held, proposals sent, workshops delivered, follow-on engagements. A reasonable first quarter is two workshops delivered and one intensive sold from them. Price can move once there are three paid references.
 
 ---
 

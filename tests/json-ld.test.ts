@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { organization, person, service, faqPage } from "@/lib/json-ld";
 import { faq } from "@/content/faq";
 import { site } from "@/content/site";
+import { offerings } from "@/content/offerings";
 
 describe("json-ld", () => {
   it("faqPage mirrors every faq item", () => {
@@ -26,12 +27,12 @@ describe("json-ld", () => {
     expect(j.jobTitle.length).toBeGreaterThan(0);
   });
 
-  it("service carries the cohort price", () => {
+  it("service carries every offering price", () => {
     const j = service();
     expect(j["@type"]).toBe("Service");
     expect(j.provider["@type"]).toBe("Organization");
     expect(j.offers).toHaveLength(3);
-    expect(j.offers[2].price).toBe(String(site.pricing.cohortUsd));
+    expect(j.offers.map((o) => o.price)).toEqual(offerings.map((o) => String(o.priceUsd)));
     expect(j.offers[0].priceCurrency).toBe("USD");
   });
 });

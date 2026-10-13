@@ -38,7 +38,7 @@ export function ContactForm() {
       setServerError(json.error ?? "Something went wrong");
       setStatus("error");
     } catch {
-      setServerError("Network error. Email me directly instead.");
+      setServerError("Network error. Email us directly instead.");
       setStatus("error");
     }
   }

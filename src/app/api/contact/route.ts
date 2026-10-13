@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     await sendContactEmail(result.data);
   } catch (err) {
     console.error("contact email failed:", err instanceof Error ? err.message : err);
-    return NextResponse.json({ error: "Could not send your message. Email me directly instead." }, { status: 502 });
+    return NextResponse.json({ error: "Could not send your message. Email us directly instead." }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

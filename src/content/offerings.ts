@@ -10,7 +10,6 @@ export interface Offering {
   duration: string;
   who: string;
   outcome: string;
-  /** PLACEHOLDER prices for the workshop and intensive. Cohort price from Jordan. */
   priceUsd: number;
   includes: string[];
   /** How the time is spent. */
@@ -23,11 +22,56 @@ export interface Offering {
 
 export const offerings: Offering[] = [
   {
+    slug: "virtual",
+    name: "One-day virtual workshop",
+    format: "Remote, over Zoom",
+    duration: "1 day, 6 hours",
+    who: "Any team already using ChatGPT or Copilot that wants more from it, in one office or spread out",
+    outcome:
+      "Everyone moves from chatting with AI to running Claude Code, Codex, and agents on their own work, and leaves with one repetitive task handed off.",
+    priceUsd: 7500,
+    includes: [
+      "Six hours live over Zoom",
+      "Claude Code or Codex set up on each person's machine",
+      "Hands-on time on each person's real tasks, with us reviewing",
+      "A written workflow and review checklist for each person",
+    ],
+    agenda: [
+      {
+        label: "Hour 1",
+        body: "Setup. Everyone gets Claude Code or Codex installed and connected to the files and tools they work in.",
+      },
+      {
+        label: "Hours 2 to 3",
+        body: "How the best AI users work. The difference between asking a chatbot and handing a multi-step task to an agent, shown live, then done by each person on a task they brought.",
+      },
+      {
+        label: "Hours 4 to 5",
+        body: "Each person picks one repetitive part of their week and scripts it or hands it to an agent. We review as they go.",
+      },
+      {
+        label: "Hour 6",
+        body: "Checking the output. What to hand off, what to keep, how to review agent work, and a short written workflow each person keeps.",
+      },
+    ],
+    walkAway: [
+      "Everyone set up with Claude Code or Codex and using it on their own work",
+      "One repetitive task per person handed to an agent or a script",
+      "A written workflow and review checklist each person keeps",
+      "A short list of workflows worth building a real system around",
+    ],
+    before: [
+      "Each person brings one task they do every week",
+      "Laptops where people can install software, or someone from IT on hand to approve it",
+      "Access to the files and tools those tasks touch",
+    ],
+  },
+  {
     slug: "workshop",
-    name: "One-day workshop",
+    name: "One-day on-site workshop",
     format: "In person, at your office",
-    duration: "1 day",
-    who: "Leadership and the people who run operations",
+    duration: "1 day, 8 hours",
+    who: "Leadership and the people who run operations, deciding what to build first",
     outcome:
       "Map your operations, see how the best AI users actually work, and leave with a plan and a working prototype of your first system.",
     priceUsd: 15000,
@@ -70,15 +114,15 @@ export const offerings: Offering[] = [
   },
   {
     slug: "intensive",
-    name: "Three-day intensive",
-    format: "Remote, over Zoom",
-    duration: "3 days, 4 hours per day",
-    who: "A team of 4 to 8",
+    name: "Three-day on-site intensive",
+    format: "In person, at your office",
+    duration: "3 days, all day",
+    who: "The 4 to 8 people who will build and run your first system, at least one comfortable with code or data",
     outcome:
-      "Build a working AI system against your real data, and learn to work with AI the way the people getting ten times the output do.",
-    priceUsd: 7500,
+      "Your team builds and deploys a working AI system against your real data in three days, and each person leaves working with AI differently.",
+    priceUsd: 25000,
     includes: [
-      "Twelve hours of hands-on instruction and building",
+      "Three full days at your office, building with your team",
       "One working system connected to your real data",
       "Each person working with Claude Code or Codex on their own tasks",
       "Deployment and runbook",
@@ -87,15 +131,15 @@ export const offerings: Offering[] = [
     agenda: [
       {
         label: "Day 1",
-        body: "Foundations and tools. How LLM APIs actually work, structured outputs, tool use. Then the shift from chatbots to Claude Code, Codex, and agents, applied to each person's own work. Pick the system to build.",
+        body: "Foundations and the pick. How LLM APIs actually work, structured outputs, tool use. Then the shift from chatbots to Claude Code, Codex, and agents, applied to each person's own work. Map the workflow and pick the system to build.",
       },
       {
         label: "Day 2",
-        body: "Build. Connect the system to your real data and the tools you already run on. Design the human handoff: what it does alone, what it asks about.",
+        body: "Build. Set up the AI data pipeline that feeds the system from your real data, and connect it to the tools you already run on. Design the human handoff: what it does alone, what it asks about.",
       },
       {
         label: "Day 3",
-        body: "Harden and deploy. Tests, failure modes, monitoring, cost. Ship it, write the runbook, and rank what to build next.",
+        body: "Harden and deploy. Tests, failure modes, monitoring, cost. Ship it, write the runbook, show leadership what was built, and rank what to build next.",
       },
     ],
     walkAway: [
@@ -106,56 +150,10 @@ export const offerings: Offering[] = [
       "Two weeks of questions answered after the session",
     ],
     before: [
-      "Four to eight people who can block four hours a day for three days",
+      "Four to eight people out of their regular work for three full days",
       "At least one person comfortable with code or data",
       "Access to the data and systems the project touches",
-    ],
-  },
-  {
-    slug: "cohort",
-    name: "Eight-week cohort",
-    format: "On site or remote",
-    duration: "8 weeks",
-    who: "A team of 4 to 8",
-    outcome:
-      "One system shipped to production inside your company, owned and understood by the people who built it, and a team that works with AI differently from here on.",
-    priceUsd: 50000,
-    includes: [
-      "Eight weeks of instruction and working sessions",
-      "Code and architecture review on your real project",
-      "One AI system deployed to production",
-      "Runbook, monitoring, and a ranked list of the next three systems",
-      "Thirty days of support after the cohort",
-    ],
-    agenda: [
-      {
-        label: "Weeks 1 to 2",
-        body: "Foundations and the pick. LLM APIs, structured outputs, tool use, and working with Claude Code and Codex on real tasks. Map operations and choose the system.",
-      },
-      {
-        label: "Weeks 3 to 5",
-        body: "Integrations, agents, and human handoff. Connect the systems the project needs, build the core, and decide what the system may do alone.",
-      },
-      {
-        label: "Weeks 6 to 7",
-        body: "Build week and hardening. Ship end to end behind a flag, then break it on purpose: tests, retries, monitoring, cost.",
-      },
-      {
-        label: "Week 8",
-        body: "Deploy and own. Production deploy, runbook, handoff to the wider team, and a presentation to leadership of what shipped.",
-      },
-    ],
-    walkAway: [
-      "One AI system in production, built and owned by your team",
-      "Monitoring, human handoff, and a runbook",
-      "A ranked list of the next three systems",
-      "A team that scopes and ships the next project without outside help",
-      "Thirty days of support after the cohort ends",
-    ],
-    before: [
-      "Four to eight people with real time freed up for eight weeks",
-      "One workflow you already know is broken and are willing to fix in public",
-      "A sponsor who will attend the week-eight presentation",
+      "A room at your office for the three days",
     ],
   },
 ];

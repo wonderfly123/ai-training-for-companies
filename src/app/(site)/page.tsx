@@ -15,7 +15,7 @@ import { faqPage } from "@/lib/json-ld";
 import { faq } from "@/content/faq";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name} | Train your team to build AI in-house` },
+  title: { absolute: `${site.name} | Train your team to work with AI and build it` },
   description: site.description,
   alternates: { canonical: "/" },
 };

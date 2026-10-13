@@ -2,7 +2,7 @@
 export const fluency = {
   eyebrow: "The other half",
   heading: "Your team has ChatGPT. The best AI users work differently.",
-  body: "Most teams use AI like a search box: ask a question, copy the answer. The people getting ten times the output run Claude Code and Codex from the terminal, hand multi-step work to agents, and script the repetitive parts. Every format we offer teaches that way of working on your team's real tasks, alongside building systems.",
+  body: "Most teams use AI like a search box: ask a question, copy the answer. The people getting 10x the output run Claude Code and Codex from the terminal, hand multi-step work to agents, and script the repetitive parts. Every format we offer teaches that way of working on your team's real tasks.",
   points: [
     {
       title: "From chat to agents",

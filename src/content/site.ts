@@ -15,11 +15,6 @@ export interface SiteConfig {
     phone: string;
     calendar: string;
   };
-  pricing: {
-    cohortUsd: number;
-    cohortSize: string;
-    weeks: number;
-  };
 }
 
 /**
@@ -29,9 +24,9 @@ export interface SiteConfig {
  */
 export const site: SiteConfig = {
   name: "AI Training For Companies",
-  tagline: "We train your team to build AI systems in-house.",
+  tagline: "We train your team to work with AI and build AI systems you own.",
   description:
-    "Hands-on AI training for companies: build AI systems your team owns, and learn to work with AI the way the best users do, with Claude Code, Codex, and agents on your real tasks. A one-day workshop, a three-day intensive, or an eight-week cohort.",
+    "Hands-on AI training for companies, from AI data pipelines to workflow best practices to 10x productivity with Claude Code, Codex, and agents, on your team's real work. A one-day virtual workshop, a one-day on-site workshop, or a three-day on-site intensive.",
   url: "https://aitrainingforcompanies.com",
   founder: {
     name: "Jordan Millhausen",
@@ -44,10 +39,5 @@ export const site: SiteConfig = {
     email: "millhausenjordan@gmail.com",
     phone: "PLACEHOLDER",
     calendar: "PLACEHOLDER",
-  },
-  pricing: {
-    cohortUsd: 50000,
-    cohortSize: "4 to 8 people",
-    weeks: 8,
   },
 };

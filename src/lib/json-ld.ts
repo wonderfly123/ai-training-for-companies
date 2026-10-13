@@ -32,7 +32,7 @@ export function service() {
   return {
     "@context": CONTEXT,
     "@type": "Service" as const,
-    name: "AI training for companies: workshop, intensive, and cohort",
+    name: "AI training for companies: virtual workshop, on-site workshop, and intensive",
     serviceType: "AI training for companies",
     description: site.description,
     url: `${site.url}/offerings`,

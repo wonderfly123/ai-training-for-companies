@@ -4,16 +4,15 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { NumberedList } from "@/components/ui/numbered-list";
 import { MonoLabel } from "@/components/ui/mono-label";
-import { WeekList } from "@/components/site/week-list";
 import { OfferingsGrid } from "@/components/site/offerings-grid";
 import { ContactCta } from "@/components/site/contact-cta";
 import { JsonLd } from "@/components/site/json-ld";
 import { service } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
-  title: "AI Training Offerings for Companies: Workshop, Intensive, Cohort",
+  title: "AI Training Offerings for Companies: Virtual Workshop, On-Site Workshop, Intensive",
   description:
-    "Three ways to train your team to build AI: a one-day workshop at your office, a three-day remote intensive, or an eight-week cohort that ships a system to production. Formats, outcomes, and pricing.",
+    "Three ways to train your team to work with AI and build AI systems: a one-day virtual workshop, a one-day workshop at your office, or a three-day intensive at your office that deploys a working system. Formats, outcomes, and pricing.",
   alternates: { canonical: "/offerings" },
 };
 
@@ -35,19 +34,6 @@ export default function OfferingsPage() {
       <section className="border-b border-rule">
         <Container className="py-20">
           <OfferingsGrid />
-        </Container>
-      </section>
-
-      <section className="border-b border-rule">
-        <Container className="py-20">
-          <SectionHeading
-            eyebrow="The eight-week cohort, week by week"
-            title="What happens, and when"
-            lede={program.summary}
-          />
-          <div className="mt-10">
-            <WeekList weeks={program.weeks} />
-          </div>
         </Container>
       </section>
 

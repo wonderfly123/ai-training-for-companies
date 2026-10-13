@@ -94,7 +94,7 @@ function light(section: string, title: string) {
   const s = pres.addSlide({ masterName: "DARK", sectionTitle: "Open" });
   s.addImage({ path: path.resolve("public/images/hero-windansea-ldx3.jpg"), x: 6.2, y: 0, w: 3.8, h: H, sizing: { type: "cover", w: 3.8, h: H } });
   text(s, site.tagline, { x: M, y: 1.5, w: 5.2, h: 2.0, fontSize: 36, bold: true, color: PAPER });
-  text(s, "One day at your office. Three days over Zoom. Eight weeks to production.", { x: M, y: 3.6, w: 5.2, h: 0.5, fontFace: MONO, fontSize: 11, color: "B5B5B5" });
+  text(s, "Six hours over Zoom. A day at your office. Three days to a working system.", { x: M, y: 3.6, w: 5.2, h: 0.5, fontFace: MONO, fontSize: 11, color: "B5B5B5" });
 }
 
 // 2. Problem

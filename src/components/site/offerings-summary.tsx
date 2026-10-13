@@ -10,7 +10,7 @@ export function OfferingsSummary() {
         <SectionHeading
           eyebrow="Offerings"
           title="Three ways to train your team"
-          lede="A day at your office, three days over Zoom, or eight weeks to a system in production. Your team builds. We teach, review, and support it after."
+          lede="Six hours over Zoom, a full day at your office, or three days at your office building a working system. Hands-on, on your real work."
         />
         <div className="mt-12">
           <OfferingsGrid compact />
